@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Language" content="ja">
+  <link href="../document.css" type="text/css" rel="stylesheet" />
+  <title>「たのしいRuby 第4版」練習問題の解答例</title>
+
+  <script type="text/javascript" src="../sh/scripts/shCore.js"></script>
+  <script type="text/javascript" src="../sh/scripts/shBrushRuby.js"></script>
+  <link type="text/css" rel="stylesheet" href="../sh/styles/shCore.css"/>
+  <link type="text/css" rel="stylesheet" href="../sh/styles/shThemeEclipse.css" />
+  <script type="text/javascript">
+    SyntaxHighlighter.config.clipboardSwf = '../sh/scripts/clipboard.swf';
+    SyntaxHighlighter.config.strings.expandSource = 'ソースを見る';
+    SyntaxHighlighter.config.strings.viewSource = '別のウィンドウで表示';
+    SyntaxHighlighter.config.strings.copyToClipboard = 'クリップボードにコピー';
+    SyntaxHighlighter.config.strings.copyToClipboardConfirmation = 'コードがクリップボードにコピーされました';
+    SyntaxHighlighter.config.strings.print = '印刷';
+    SyntaxHighlighter.config.strings.help = 'ヘルプ';
+    SyntaxHighlighter.all();
+  </script>
+</head>
+<body>
+<h1>「たのしいRuby 第4版」練習問題の解答例</h1>
+<div class="navigation">
+[<a href="#numeric">数値(Numeric)クラス</a>|<a
+href="#array">配列(Array)クラス</a>|<a
+href="#string">文字列(String)クラス</a>|<a
+href="#hash">ハッシュ(Hash)クラス</a>|<a
+href="#regexp">正規表現(Regexp)クラス</a>|<a
+href="#io">IOクラス</a>|<a
+href="#file">FileクラスとDirクラス</a>|<a
+href="#encoding">エンコーディング(Encoding)クラス</a>|<a
+href="#time">TimeクラスとDateクラス</a>|<a
+href="#proc">Procクラス</a>]
+</div>
+<a name="numeric"></a>
+<h2>数値(Numeric)クラス</h2>
+<h3>(1)の解答</h3>
+<p>問題で与えられた式をそのまま使ってメソッドを定義します。</p>
+<%= _("numeric/1") %>
+<p>問題の式は「華氏＝摂氏×９÷５＋３２」でしたが、途中の計算の結果が浮動小数点数になるように、９と５はそれぞれ<code>9.0</code>や<code>5.0</code>にしています。こうしないと、<code>cels</code>が整数だった場合、正しく計算されません(5で割るところの結果がIntegerになってしまいます)。</p>
+
+<h3>(2)の解答</h3>
+<p>(1)の逆の計算を定義します。
+「+」と「*」の優先順位の違いから括弧が必要なことに注意してください。</p>
+<%= _("numeric/2") %>
+
+<p>
+さらに、華氏を1度から100度まで変えるには、<code>upto</code>メソッドを使います。
+</p>
+<%= _("numeric/2_2") %>
+
+<h3>(3)の解答</h3>
+<p>「10.6 乱数」で説明した<code>rand</code>メソッドを使います。単に「<code>rand(6)</code>」とした場合は、0から5の値が返るので結果に1を足します。</p>
+<%= _("numeric/3") %>
+
+<h3>(4)の解答</h3>
+<p>単純に<code>dice+dice+...</code>と書いても可能ではありますが、やはりここは繰り返しを使うべきでしょう。</p>
+<%= _("numeric/4") %>
+
+<h3>(5)の解答</h3>
+<p>まず、2より小さい数は素数でないとします。それ以上の数は、2からその数の平方根まで割り算を行って、すべての剰余が0でないことを確認します。</p>
+<%= _("numeric/5") %>
+
+<a name="array"></a>
+<h2>配列(Array)クラス</h2>
+<h3>(1)の解答</h3>
+<p>二つの方法を挙げます。もっと小さな配列なら「<code>ary = [1, 2, 3, ...]</code>」とリテラルで定義してもいいでしょう。</p>
+<%= _("array/1") %>
+
+<h3>(2)の解答</h3>
+<p>普通に<code>Array#collect</code>を使えば、新しい配列が作れます。同じ配列をそのまま100倍したいときは、「!」がついた<code>Array#collect!</code>を使います。</p>
+<%= _("array/2") %>
+
+<h3>(3)の解答</h3>
+<p>条件に当てはまるものをとりのぞくには、<code>Array#reject</code>を使います。</p>
+<%= _("array/3") %>
+
+<h3>(4)の解答</h3>
+<p><code>Array#sort</code>と<code>Array#sort_by</code>を使う方法では、ブロックの結果を-1倍することによって、逆にソートされるようにしています。</p>
+<%= _("array/4") %>
+
+<h3>(5)の解答</h3>
+<p>別解として、<code>Array#inject</code>を使う方法があります。<code>Array#each</code>を使う場合は値を蓄えておくための変数(例中の<code>result</code>)を用意する必要がありますが、<code>Array#inject</code>を使う場合は必要ありません。</p>
+<%= _("array/5") %>
+
+<h3>(6)の解答</h3>
+<p>取り出す要素の先頭のインデックスと必要な要素の数を指定します。</p>
+<%= _("array/6") %>
+
+<h3>(7)の解答</h3>
+<p>Array#eachでary1の各要素にループさせるのと同時に、インデックスを使ってary2の各要素にアクセスするのがポイントです。また、別解として、<code>Array#zip</code>というメソッドを使うと、２つの配列に対して同時に各要素を参照することができます。</p>
+<%= _("array/7") %>
+
+<a name="string"></a>
+<h2>文字列(String)クラス</h2>
+<h3>(1)の解答</h3>
+<p>単純に<code>split</code>で分割すればだいじょうぶです。</p>
+<%= _("string/1") %>
+
+<h3>(2)の解答</h3>
+<p>アルファベットだけの場合、引数なしの<code>Array#sort</code>でソートされます。この辺りは配列の復習にもなっています。</p>
+<%= _("string/2") %>
+
+<h3>(3)の解答</h3>
+<p>こちらでは<code>Array#sort_by</code>を使って、引数の比較をしています。その際、<code>String#downcase</code>で強制的に小文字にしてから比較するため、大文字小文字の区別がなくなります。</p>
+<%= _("string/3") %>
+
+<h3>(4)の解答</h3>
+<p>文字列の先頭を大文字にするには<code>String#capitalize</code>を使います。これを配列の各要素に行うため、<code>Array#collect</code>と組み合わせています。</p>
+<%= _("string/4") %>
+
+<p>
+なお、文字列の連結は別解で示した<code>Array#join</code>を使うと簡単です。
+このメソッドは配列に含まれる文字列を連結するもので、要素と要素の間に挿入する文字列を引数で指定することもできます。
+</p>
+<pre class="brush: ruby">
+p ["a", "b", "c"].join        #=> "abc"
+p ["a", "b", "c"].join("-")   #=> "a-b-c"
+</pre>
+
+<h3>(5)の解答</h3>
+<p>ハッシュを作成して、文字をキー、出現した回数を値として記録します。最後に文字をソートして回数個数のアスタリスクとともに出力します。</p>
+<%= _("string/5") %>
+<p>ハッシュを初期化する際にデフォルト値として0を返すようにすると次のようになります。</p>
+<%= _("string/5-1") %>
+
+<h3>(6)の解答</h3>
+<p>この問題は応用問題でかなり難しいです。</p>
+<p>各桁の数字を<code>String#gsub!</code>で置き換えていきます。桁の切り出しには正規表現を駆使しています。</p>
+<%= _("string/6") %>
+
+<a name="hash"></a>
+<h2>ハッシュ(Hash)クラス</h2>
+<h3>(1)の解答</h3>
+<p>１つずつ個別に定義してもよいのですが、まとめて定義してみます。</p>
+<%= _("hash/1") %>
+
+<h3>(2)の解答</h3>
+<p>普通に<code>Hash#size</code>を使えば求まります。</p>
+<%= _("hash/2") %>
+
+<h3>(3)の解答</h3>
+<p>普通に配列でキーを与えてもいいのですが、簡単のため<code>%w</code>を使ってみます。</p>
+<%= _("hash/3") %>
+
+<h3>(4)の解答</h3>
+<p>文字列を<code>String#split</code>で分割したあと、<code>Array#shift</code>で一つずつ取り出して、ハッシュを作っていきます。</p>
+<%= _("hash/4") %>
+
+<a name="regexp"></a>
+<h2>正規表現(Regexp)クラス</h2>
+<h3>(1)の解答</h3>
+<p>メールアドレスは複雑なルールがあったり、さらにはルールに適合しないのに実際には使われているアドレスもあったりするなど、ややこしい事情もあるのですが、ここではわりきった形で解析してみました。</p>
+<%= _("regexp/1") %>
+
+<h3>(2)の解答</h3>
+<p>「難しい」という部分が2回出現しますが、1回の置換で置き換えるのは難しいので2回に分けています。「難しい」を「簡単だ」に置き換えると、「難しいんだ」の部分が「簡単だんだ」となってしまうため、先に「難しいんだ」を「簡単なんだ」に置き換えています。</p>
+<%= _("regexp/2") %>
+
+<h3>(3)の解答</h3>
+<p>基本的には文字列クラスの練習問題(4)と同様ですが、「-」の正規表現を作るときにはエスケープします。回答例ではメソッドチェインを使って１行で書いてみました。</p>
+<%= _("regexp/3") %>
+
+<a name="io"></a>
+<h2>IOクラス</h2>
+<h3>(1)の解答</h3>
+<p>行数、単語数、文字数を出力する<code>wc</code>メソッドを作成しました。この例では<code>String#split</code>を使って行を単語に分割していますが、行頭に空白を含む場合は<code>String#split</code>の結果に空白の文字列が含まれるため、これを削除していることに注意してください。</p>
+<%= _("io/1") %>
+
+<h3>(2)の解答</h3>
+<p>これは個別にスクリプトを書いてみます。まず、ファイルの逆順です。
+<code>IO#readlines</code>で行ごとに読み込んだ後、<code>IO#rewind</code>で先頭に戻し、<code>IO#truncate</code>で空にしてから、<code>IO#reverse</code>で逆順にしたものを書きこみます。</p>
+<%= _("io/2a") %>
+
+<p>次に、1行先頭出力です。これは、実は先ほどのスクリプトを少しいじるだけで実現できます。</p>
+<%= _("io/2b") %>
+
+<p>そして、1行末尾出力です。こちらはちょうど(a)(b)を組み合わせた形です。</p>
+<%= _("io/2c") %>
+
+<h3>(3)の解答</h3>
+<p>いったん<code>queue</code>という変数に読み込んだ行を保存させるのがポイントです。</p>
+<%= _("io/3") %>
+
+<a name="file"></a>
+<h2>FileクラスとDirクラス</h2>
+<h3>(1)の解答</h3>
+<p><code>FileTest.directory?</code>を使ってディレクトリではないものを排除した後、<code>Dir.open</code>を使ってディレクトリ内のファイルのファイル名を調べていきます。</p>
+<%= _("file/1") %>
+
+<p>なお、本文中では詳しく取り上げていませんが、RubyのライブラリにはRubyで記述されたものの他に、C言語などで記述された拡張ライブラリがあります。拡張ライブラリは「<code>.rb</code>」ではなく、「<code>.dll</code>」や「<code>.so</code>」といったプラットフォームによって異なる拡張子を持ったファイル名になっています。</p>
+<p><code>rbconfig</code>ライブラリから、この拡張子を取得して拡張ライブラリにも対応させたバージョンを以下に示します。</p>
+<%= _("file/1adv") %>
+
+<h3>(2)の解答</h3>
+<p>findライブラリの応用です。</p>
+<%= _("file/2") %>
+
+<a name="encoding"></a>
+<h2>エンコーディング(Encoding)クラス</h2>
+<h3>(1)の解答</h3>
+<p><code>String#encode</code>メソッドで各文字列をUTF-8に変換してから連結します。</p>
+<%= _("encoding/1") %>
+
+<h3>(2)の解答</h3>
+<p>設問のとおりの処理を順に行っています。出力されたファイルのエンコーディングを確認する方が大変かもしれませんね。</p>
+<%= _("encoding/2") %>
+
+<h3>(3)の解答</h3>
+<p>Windows-31JはIANA(Internet Assigned Number Authority:インターネット上のプロトコルで使用されるアドレスなどの標準化を行う機関)で登録された名前で、<a href="http://www.iana.org/assignments/character-sets/character-sets.xml">Character Sets</a>の説明によると、Shift_JIS(JIS X0201:1997、JIS X0208:1997)に、以下を追加したものとされています。丸つきの数字などが拡張部分に該当します。
+<ul>
+<li>NEC特殊文字(13区) 0x8740～0x879C</li>
+<li>NEC選定IBM拡張文字(89～92区) 0xED40～0xEEFC</li>
+<li>IBM選定IBM拡張文字(115～119区) 0xFA40～0xFC4B</li>
+</ul>
+</p>
+<%= _("encoding/3") %>
+
+<h3>(4)の解答</h3>
+<p>両方をUTF-8にするのではなく、UTF-8に揃えて比較します。</p>
+<%= _("encoding/4") %>
+
+<a name="time"></a>
+<h2>TimeクラスとDateクラス</h2>
+<h3>(1)の解答</h3>
+<p>日時を表す日本語文字列の解析は正規表現でがんばります。現在の時刻は<code>Time.now</code>で取得し、与えられた文字列から取得できなかった項目を補います。最後に、<code>Time.mktime</code>で時刻を生成します。</p>
+<%= _("time/1") %>
+
+<h3>(2)の解答</h3>
+<p>「.」で始まるファイルを削除してから、File.mtimeで取得できる日時の順にソートします。最後にファイル名と日付を出力します。</p>
+<%= _("time/2") %>
+
+<h3>(3)の解答</h3>
+<p>文房具の万年カレンダーの要領でカレンダーを整形する例を紹介します。2月30日などの存在しない日付は、月末の日付と比較することで弾いています。また、テーブル中の日付が存在しない部分も同じ条件で弾くために「99」で初期化しています。</p>
+<%= _("time/3") %>
+
+<a name="proc"></a>
+<h2>Procクラス</h2>
+<h3>(1)の解答</h3>
+<code>obj</code>から<code>each</code>メソッドで要素を取り出してブロックを適用した結果を配列に格納していきます。
+<%= _("proc/1") %>
+
+<h3>(2)の解答</h3>
+以下のような実行結果が得られます。
+<%= _("proc/2") %>
+
+<h3>(3)の解答</h3>
+メソッド内で作ったローカル変数に値を足し込んでいきます。
+<%= _("proc/3") %>
+
+<hr />
+</body>
+</html>

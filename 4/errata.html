@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="ja">
+  <link rel="stylesheet" type="text/css" href="document.css">
+  <title>『たのしいRuby 第4版』正誤表</title>
+</head>
+<body>
+<h1>『たのしいRuby 第4版』正誤表</h1>
+
+
+<h3>p.6 irbの実行</h3>
+<p>
+Ruby Instarller for Windows 2.0.0-p0を使ってRubyをインストールした場合、irbコマンドを実行したときに以下のように「DL is deprecated, please use Fiddle」という警告が表示されます。
+</p>
+<pre>
+ruby 2.0.0p0 (2013-02-24) [x64-mingw32]
+
+C:\Users\gotoyuzo&gt;irb
+DL is deprecated, please use Fiddle
+&gt;&gt;
+</pre>
+<p>これはRuby Installer for Windowsに添付されているreadlineライブラリがDLという古いライブラリを使っているためです。警告されていますが、使用上の問題は特にありません。疑問に思われるかもしれませんので補足しておきます。</p>
+
+<h3>p.39 最後の行(第5刷で修正)</h3>
+<p>プログラムと説明で使っているメソッド名が違っています。</p>
+<pre>
+誤 <tt>print</tt>メソッドが繰り返し実行されるのがわかります。
+
+正 <tt>puts</tt>メソッドが繰り返し実行されるのがわかります。
+</pre>
+
+<h3>p.46 実行例(第4刷で修正)</h3>
+<p>実行するスクリプト名が誤っています。</p>
+<pre>
+誤 &gt; ruby happybirthday.rb Ruby
+
+正 &gt; ruby happy_birth.rb Ruby
+</pre>
+
+<h3>p.53 実行例(第4刷で修正)</h3>
+<p>実行するスクリプト名が誤っています。</p>
+<pre>
+誤 &gt; ruby hello_ruby.rb
+
+正 &gt; ruby hello_ruby2.rb
+</pre>
+
+<h3>p.62 List 4.1 scopetest.rb 4行目(第4刷で修正)</h3>
+<p>
+<tt>require</tt>でスクリプトと同じディレクトリにあるファイルを読み込むには、パスを明示しなければいけません。
+</p>
+<pre>
+誤 4: require "sub"
+
+正 4: require "./sub"
+</pre>
+<p>p.63の図4.1中の<tt>require</tt>も同様です。</p>
+
+<h3>p.99 List 6.13 break_next_redo.rb 18行目(第5刷で修正)</h3>
+<p>
+<tt>p</tt>メソッドとその引数の配列の間に半角空白が必要です。空けないと変数<tt>p</tt>へのインデックスアクセスのように解釈されます。
+</p>
+<pre>
+誤  p[i,lang]
+
+正  p [i,lang]
+</pre>
+
+
+<h3>p.179 List 9.1 point.rb 2行目(第5刷で修正)</h3>
+<p>
+のちのページのサンプルで<tt>x=</tt>メソッドや<tt>y=</tt>メソッドを使うため、<tt>attr_reader</tt>ではなく<tt>attr_accessor</tt>を使ってください。
+</p>
+<pre>
+誤  attr_reader :x, :y
+
+正  attr_accessor :x, :y
+</pre>
+
+<h3>p.352 io.binmodeのサンプルコード 2行目(第4刷で修正)</h3>
+<p><tt>io.binmode</tt>は引数を受け取りません。</p>
+<pre>
+誤   io.binmode 15
+
+正   io.binmode
+</pre>
+
+<h3>p.402 練習問題(3)(第2刷で修正)</h3>
+<p>
+設問が適切ではありません。第2刷以降では以下のように変更されます。
+</p>
+<blockquote>
+(3) <code>str.encode("Shift_JIS")</code>と<code>str.encode("Windows-31J")</code>を実行したときに結果が異なるような、UTF-8の文字列<code>str</code>を見つけてください。
+</blockquote>
+
+<h3>p.420 冒頭のサンプルコード(第4刷で修正)</h3>
+<p>
+Procオブジェクトを実行するにはProc#callかProc#[]を使います。
+</p>
+<pre>
+誤 p square(5)
+
+正 p square[5]
+</pre>
+
+<h3>p.491 Fileクラスの索引(第5刷で修正)</h3>
+<p><tt>File</tt>クラスの参照先が261ページになっていますが、正しくは361ページです。</p>
+</body>
+</html>
