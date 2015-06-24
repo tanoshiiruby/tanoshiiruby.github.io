@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html 
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>errata</title>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<link href="sbp-ruby.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<h2><a name="label-0" id="label-0">初刷の正誤表</a></h2><!-- RDLabel: "初刷の正誤表" -->
+<p>第ニ刷で修正された箇所の一覧です。
+明らかな誤りではないものの、意味がわかりにくかったり、表現が適切でない文も修正しました。</p>
+<dl>
+<dt><a name="label-1" id="label-1">p.x 下から10行目</a></dt><!-- RDLabel: "p.x 下から10行目" -->
+<dd>
+<ul>
+<li>誤: ソフトバンクブリッシング</li>
+<li>正: ソフトバンクパブリッシング</li>
+</ul>
+</dd>
+<dt><a name="label-2" id="label-2">p.8 2行目</a></dt><!-- RDLabel: "p.8 2行目" -->
+<dd>
+<ul>
+<li>誤: 「Hello，ruby」という文字列</li>
+<li>正: 「Hello，Ruby.」という文字列</li>
+</ul>
+</dd>
+<dt><a name="label-3" id="label-3">p.8 下から11行目</a></dt><!-- RDLabel: "p.8 下から11行目" -->
+<dd>
+<ul>
+<li>誤: 「数値」を使って「足し算」や「掛け算」をしたり、</li>
+<li>正: 「数値」を使って足し算や掛け算をしたり、</li>
+</ul>
+<p>(他の例ではオブジェクトをかぎかっこで括っている)</p>
+</dd>
+<dt><a name="label-4" id="label-4">p.41 2.3の末尾</a></dt><!-- RDLabel: "p.41 2.3の末尾" -->
+<dd>
+<ul>
+<li>誤: 文字列処理はRubyの得意な分野の1つです。</li>
+<li>正: 文字列処理はRubyの得意分野ですが、それはこの正規表現のためでもあります。</li>
+</ul>
+<p>(唐突)</p>
+</dd>
+<dt><a name="label-5" id="label-5">p.61　最後の段落の冒頭</a></dt><!-- RDLabel: "p.61　最後の段落の冒頭" -->
+<dd>
+<ul>
+<li>誤: 一般的に、グローバル変数はほとんど使いません。</li>
+<li>正: 一般的に、グローバル変数はあまり好まれません。</li>
+</ul>
+<p>(誰が使わないのか不明)</p>
+</dd>
+<dt><a name="label-6" id="label-6">p.75 ページ中ごろの図</a></dt><!-- RDLabel: "p.75 ページ中ごろの図" -->
+<dd>
+「真」と「偽」が逆になっています。「真」のときのみ、「文」が実行されます。
+</dd>
+<dt><a name="label-7" id="label-7">p.86 7行目</a></dt><!-- RDLabel: "p.86 7行目" -->
+<dd>
+<ul>
+<li>正: さらに、繰り返しが（略）、さらにその結果がどこで利用されているかが読み取りにくくなります。</li>
+<li>誤: さらに、繰り返しが（略）、そしてその結果がどこで利用されているかが読み取りにくくなります。</li>
+</ul>
+<p>(「さらに」が2回)</p>
+</dd>
+<dt><a name="label-8" id="label-8">p.90 本文下から2行目</a></dt><!-- RDLabel: "p.90 本文下から2行目" -->
+<dd>
+<ul>
+<li>誤: 変数toからfromまでの合計</li>
+<li>正: 変数fromからtoまでの合計</li>
+</ul>
+</dd>
+<dt><a name="label-9" id="label-9">p.91 上段のサンプルコード</a></dt><!-- RDLabel: "p.91 上段のサンプルコード" -->
+<dd>
+<p>「to..from」ではなく「from..to」です。
+また、最後の「}」は「end」の誤りである他に、変数「sum」の
+初期化が抜けています。
+正しいソースは以下のようになります。</p>
+<pre>from = 10
+to = 20
+sum = 0
+for i in from..to
+  sum = sum + i
+end
+print sum, "\n"</pre>
+</dd>
+<dt><a name="label-10" id="label-10">p.107 2行目</a></dt><!-- RDLabel: "p.107 2行目" -->
+<dd>
+<ul>
+<li>誤: メソッドは、オブジェクトに定義されているもので、そのオブジェクトに関連するする操作を行うために使うものです。</li>
+<li>正: メソッドは、オブジェクトに定義されているもので、そのオブジェクトに関連する操作を行うために使われます。</li>
+</ul>
+<p>(「もの」が2回)</p>
+</dd>
+<dt><a name="label-11" id="label-11">p.142 サンプルコードのしたから2行目</a></dt><!-- RDLabel: "p.142 サンプルコードのしたから2行目" -->
+<dd>
+<ul>
+<li>誤: # MyClass1 に固有のメソッドなど</li>
+<li>正: # MyClass2 に固有のメソッドなど</li>
+</ul>
+</dd>
+<dt><a name="label-12" id="label-12">p.148 中程</a></dt><!-- RDLabel: "p.148 中程" -->
+<dd>
+<ul>
+<li>誤: エラーの発生場所も同時に報告されるのでデバッグも比較敵しやすい</li>
+<li>正: エラーの発生場所も同時に報告されるのでデバッグしやすい</li>
+</ul>
+</dd>
+<dt><a name="label-13" id="label-13">p.149 1行目</a></dt><!-- RDLabel: "p.149 1行目" -->
+<dd>
+<ul>
+<li>誤: 例外もオブジェクトして</li>
+<li>正: 例外もオブジェクトとして</li>
+</ul>
+</dd>
+<dt><a name="label-14" id="label-14">p.149 表9.2 backtraceの行</a></dt><!-- RDLabel: "p.149 表9.2 backtraceの行" -->
+<dd>
+<ul>
+<li>誤: !$.backtrace</li>
+<li>正: $!.backtrace</li>
+</ul>
+</dd>
+<dt><a name="label-15" id="label-15">p.167 表10.4</a></dt><!-- RDLabel: "p.167 表10.4" -->
+<dd>
+<ul>
+<li>誤: 自然対数の底e (2.718218...)</li>
+<li>正: 自然対数の底e (2.7182818...)</li>
+</ul>
+</dd>
+<dt><a name="label-16" id="label-16">p.257 中程</a></dt><!-- RDLabel: "p.257 中程" -->
+<dd>
+<ul>
+<li>誤: quoteメソッドは使わないようにするのが望ましいでしょう。</li>
+<li>正: quoteメソッドは使わないほうがよいでしょう。</li>
+</ul>
+</dd>
+<dt><a name="label-17" id="label-17">p.319 下から6行目</a></dt><!-- RDLabel: "p.319 下から6行目" -->
+<dd>
+<ul>
+<li>誤: 「@testが初期化されていない」と警告を</li>
+<li>正: 「@tsetが初期化されていない」と警告を</li>
+</ul>
+</dd>
+<dt><a name="label-18" id="label-18">p.347 List 19.2</a></dt><!-- RDLabel: "p.347 List 19.2" -->
+<dd>
+<p>~@メソッドの説明に「180度回転させた座標を返す」とあるが、誤りなので差し替え:</p>
+<pre>class Vector
+  :
+  def +@
+    self.dup               # 自分の複製を返す
+  end
+  def -@
+    Vector.new(-@x, -@y)   # x, y のそれぞれの正負を逆にする
+  end
+  def ~@
+    Vector.new(-@y, @x)    # 90度反転させた座標を返す
+  end
+end
+
+vec = Vector.new(3, 6)
+p +vec          #=&gt; (3, 6)
+p -vec          #=&gt; (-3, -6)
+p ~vec          #=&gt; (-6, 3)</pre>
+</dd>
+<dt><a name="label-19" id="label-19">p.375 6行目</a></dt><!-- RDLabel: "p.375 6行目" -->
+<dd>
+<ul>
+<li>誤: class Enumerable</li>
+<li>正: module Enumerable</li>
+</ul>
+</dd>
+<dt><a name="label-20" id="label-20">p.381 (3)のサンプルコード 下から5行目</a></dt><!-- RDLabel: "p.381 (3)のサンプルコード 下から5行目" -->
+<dd>
+<ul>
+<li>誤: # M2 をインクルードする</li>
+<li>正: # M1 をインクルードする</li>
+</ul>
+</dd>
+<dt><a name="label-21" id="label-21">p.381 (4)のサンプルコード</a></dt><!-- RDLabel: "p.381 (4)のサンプルコード" -->
+<dd>
+<p>ページが変わったところでインデントが崩れています。実際は次の通りです。</p>
+<pre>module M1
+  ...
+end
+
+module M2
+  ...
+end
+
+class C
+  include M1
+  include M2
+  include M1
+end
+
+p C.ancestors #=&gt; [C, M2, M1, Object, Kernel]</pre>
+</dd>
+<dt><a name="label-22" id="label-22">p.381 (3)の10行目</a></dt><!-- RDLabel: "p.381 (3)の10行目" -->
+<dd>
+<ul>
+<li>誤: # M1をインクルードする</li>
+<li>正: # M2をインクルードする</li>
+</ul>
+</dd>
+<dt><a name="label-23" id="label-23">p.432</a></dt><!-- RDLabel: "p.432" -->
+<dd>
+「付録CD-ROMのディレクトリ構成」の図中、「ruby」、「Windows」、
+「src」、「1.6.7」、「raa」、「manual」というディレクトリ名が
+それぞれブラケットで括られていますが、特別な意味はありません。
+誤植です。
+</dd>
+<dt><a name="label-24" id="label-24">p.454 5行目</a></dt><!-- RDLabel: "p.454 5行目" -->
+<dd>
+<ul>
+<li>誤: 引数を1つだけ渡すべきところに、2つ渡している</li>
+<li>正: 引数を取らないところに、1つ渡している</li>
+</ul>
+</dd>
+</dl>
+<h2><a name="label-25" id="label-25">第二刷の正誤表</a></h2><!-- RDLabel: "第二刷の正誤表" -->
+<p>第三刷で修正された箇所の一覧です。</p>
+<dl>
+<dt><a name="label-26" id="label-26">p.252　表14.6の見出しの上の行</a></dt><!-- RDLabel: "p.252　表14.6の見出しの上の行" -->
+<dd>
+<ul>
+<li>誤: します（表4.6）。</li>
+<li>正: します（表14.6）。</li>
+</ul>
+</dd>
+</dl>
+<h2><a name="label-27" id="label-27">第三刷の正誤表</a></h2><!-- RDLabel: "第三刷の正誤表" -->
+<dl>
+<dt><a name="label-28" id="label-28">p.345 図19.1の「?:」の説明</a></dt><!-- RDLabel: "p.345 図19.1の「?:」の説明" -->
+<dd>
+<ul>
+<li>誤: 単項演算子</li>
+<li>正: 条件演算子</li>
+</ul>
+</dd>
+</dl>
+
+</body>
+</html>

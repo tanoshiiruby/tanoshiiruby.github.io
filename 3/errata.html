@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="ja">
+  <link rel="stylesheet" type="text/css" href="document.css">
+  <title>『たのしいRuby 第3版』正誤表</title>
+</head>
+<body>
+<h1>『たのしいRuby 第3版』正誤表</h1>
+
+<h3>p.31 List 1.9</h3>
+<p>Ruby 1.9.2からカレントディレクトリ(「.」)が$LOAD_PATH(p.374)から外されました。
+use_hello.rbは、カレントディレクトリに置かれたライブラリを利用するサンプルなので、
+Ruby 1.9.2以降を使っている場合はここに書かれている方法では実行することができません。
+以下のいずれか方法で対応してください。</p>
+
+<ol>
+<li>
+<p>requireメソッドの引数でディレクトリパスを明示する。</p>
+<pre>
+require "./hello"    # hello.rbの読み込み(「.rb」は必要ない)
+hello()              # helloメソッドの起動
+</pre>
+</li>
+
+<li>
+<p>Rubyを実行する際に-Iオプション(p.366)でカレントディレクトリを指定する。</p>
+<pre>
+[実行例]
+&gt; ruby -I . use_hello.rb
+Hello, Ruby.
+</pre>
+</li>
+<li>
+<p>requireメソッドではなく、require_relativeメソッドでライブラリを読み込む。</p>
+<pre>
+require_relative "hello"  # hello.rbの読み込み(「.rb」は必要ない)
+hello()                   # helloメソッドの起動
+</pre>
+</li>
+</ol>
+
+<p>
+最初の2つの例では、Rubyを実行したときのカレントディレクトリを検索する指定を追加していますが、
+require_relativeメソッドはこのメソッドを呼び出したファイル(この場合はuse_hello.rb)が置かれた
+ディレクトリからの相対パスでライブラリを検索するため意味が異なります。
+</p>
+<p>
+単にプログラムを複数のファイルに分割して作成するようなケースでは、
+実行時にどのようなパス名でライブラリを参照するか気にする必要がないため、
+require_relativeメソッドが便利です。
+</p>
+<p>
+require_relativeメソッドはRuby 1.9.0から提供されています。
+このメソッドは「たのしいRuby」の本文では紹介していません。
+</p>
+
+<h3>p.102 フローチャート中の条件 (第5刷で修正)</h3>
+<p>フローチャートの一番右の条件が「i == 4 ?」となっていますが「i == 3 ?」の誤りです。</p>
+
+<h3>p.136 List 8.7 (第3刷で修正)</h3>
+<p>Ponitクラスのswapメソッドの3行目を以下のように修正してください。</p>
+<pre>
+    def swap(other)       # x, yの値を入れ換えるメソッド
+      tmp_x, tmp_y = @x, @y
+      @x, @y = other.x, other.y
+誤    other.x, <del>other,y</del> = <del>tmp_y</del>, <del>tmp_x</del>   # 同一クラス内では
+正    other.x, <ins>other.y</ins> = <ins>tmp_x</ins>, <ins>tmp_y</ins>   # 同一クラス内では
+                                        # 呼び出すことができる
+      return self
+    end
+</pre>
+
+<h3>p.150 箇条書きの(4)(5) (第5刷で修正)</h3>
+<p>クラス名が誤っています。</p>
+<pre>
+誤 (4)..,、応答メッセージを表現するNet::HTTPResposeオブジェクトに格納する
+　 (5)Net::HTTPResposeオブジェクトの機能によって...
+
+正 (4)..,、応答メッセージを表現するNet::HTTPResponseオブジェクトに格納する
+　 (5)Net::HTTPResponseオブジェクトの機能によって...
+</pre>
+
+<h3>p.178 表10.3 (第3刷で修正)</h3>
+<p>Math.atan2メソッドの引数の表記が誤っています。</p>
+<pre>
+誤 atan2(x)
+
+正 atan2(x, y)
+</pre>
+
+<h3>p.216 練習問題(3)の設問 (第3刷で修正)</h3>
+<p>設問の括弧の中の例が誤っています。</p>
+<pre>
+誤 (1)の配列から3の倍数だけを取り出した，新しい配列a3を作ってください(a3[0]は1，a3[2]は4になります)。
+
+正 (1)の配列から3の倍数だけを取り出した，新しい配列a3を作ってください(a3[0]は3，a3[2]は9になります)。
+</pre>
+
+<h3>p.389 本文1行目 (第3刷で修正)</h3>
+<p>本文の1行目の終わりから2行目にかかる文を以下の訂正します。</p>
+<pre>
+誤 新しいの有効範囲を作るために
+
+正 新しい有効範囲を作るために
+</pre>
+
+</body>
+</html>

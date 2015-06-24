@@ -1,0 +1,80 @@
+a:link, a:visited {
+	color: #222;
+	text-decoration: none;
+}
+
+a:active, a:visited {
+	color: #222;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #622;
+	text-decoration: none;
+}
+
+body {
+	color: #000000;
+	background-color: #ffffff;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	padding: 0;
+	border-bottom: 2px solid crimson;
+	text-align: left;
+	font-size: 200%;
+	font-weight: bolder;
+}
+
+h2 {
+	text-align: left;
+	font-size: 150%;
+	margin-top: 1em;
+	margin-bottom: 0.1em;
+	padding-left: 8px;
+	border-left: 10px solid crimson;
+	border-bottom: 1px solid crimson;
+}
+
+h3 {
+	text-align: left;
+	font-size: 120%;
+	margin-top: 1em;
+	margin-bottom: 0.1em;
+	padding-left: 8px;
+	border-left: 4px solid crimson;
+}
+
+div.navigation {
+	text-align: center;
+	font-size: 80%;
+	margin: 0;
+}
+
+div.sideimage {
+	float: right;
+	padding: 10px;
+}
+
+table {
+	padding: 20px;
+	border-color: #AAAAAA;
+}
+
+th {
+	text-align:    left;
+	padding-right: 10px;
+	padding-bottom: 3px;
+}
+
+pre {
+	font-family: monospace !important;
+	white-space: pre !important;
+	line-height: 110%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #AAAAAA;
+	padding: 8px;
+}

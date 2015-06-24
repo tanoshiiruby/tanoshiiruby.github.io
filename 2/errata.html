@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html 
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Language" content="ja-JP">
+  <link rel="stylesheet" type="text/css" href="document.css">
+  <title>『たのしいRuby 第2版』正誤表</title>
+</head>
+<body>
+<h1>『たのしいRuby 第2版』正誤表</h1>
+<p>$Id: errata.html,v 1.10 2008/01/16 07:08:35 gotoyuzo Exp $</p>
+
+<h3>p.17 (第4刷で訂正)</h3>
+先頭の行で「数値を表示するには、文字列同様、printメソッドを使います。」
+とありますが、例がputsになっています。
+「文字列と同様にprintメソッドやputsメソッドを使います。」と読み換えてください。
+
+<h3>p.83 (第5刷で訂正)</h3>
+コラム『「===」とcase文』の中程の実行例に誤りがあります。
+<pre>
+誤  p /zz/ ==="zyzzy"　#=&gt;2
+
+正  p /zz/ ==="zyzzy"　#=&gt;true
+</pre>
+
+<h3>p.92 (第2刷で訂正)</h3>
+ページ中程のList 6.4の説明でコードを指し示している行番号に誤りがあります。
+<pre>
+誤  3行目から5行目のfor文では
+
+正  2行目から4行目のfor文では
+</pre>
+
+<h3>p.134 (第5刷で訂正)</h3>
+point.rbのswapメソッドの最後から2行目に誤りがあります。
+<pre>
+誤  other.y = xtmp
+
+正  other.y = ytmp
+</pre>
+あるいは、次のように多重代入を用いると一時変数は不要になります。
+<pre>
+def swap
+  other.x, @x = @x, ohter.x
+  other.y, @y = @y, ohter.y
+end
+</pre>
+
+<h3>p.154 (第5刷で訂正)</h3>
+wc.rbの単語を数える処理に誤りがあります。
+sizeメソッドの呼び出しがひとつ余分なので削除します。 
+<pre>
+誤  ary = line.split(/\s+/).size   # 空白文字で分解する
+
+正  ary = line.split(/\s+/)        # 空白文字で分解する
+</pre>
+
+<h3>p.230 (第8刷で訂正)</h3>
+コラム「改行について」でgetsが認識する改行文字を認識する方法について、p.329を参照するように説明されていますが、p.289の誤りです。
+
+<h3>p.239 (第5刷で訂正)</h3>
+練習問題(1)の(e)が抜けています。(f)を(e)と読みかえてください。
+
+<h3>p.320 (第4刷で訂正)</h3>
+Tempfile.newがインスタンスメソッドとして表記されていますが、クラスメソッドの誤りです。
+<pre>
+誤  <i>tempfile</i><b>.new</b>(<i>basename</i>[, <i>tempdir</i>])
+
+正  <b>Tempfile.new</b>(<i>basename</i>[, <i>tempdir</i>])
+</pre>
+
+<h3>p.321 (第2刷で訂正)</h3>
+FileUtilsモジュールのメソッドの一覧に、「FileUtils.cp_rf」が挙げられていますが、このメソッドは存在しません。一方、「FileUtils.rm」には例外を無視するバージョンの「FileUtils.rm_f」がありますが、一覧から洩れています。
+
+<h3>p.321 (第5刷で訂正)</h3>
+(第2刷から第4刷のみ)下から4行目の「FileUtils.rm_f」は「FileUtils.rm_rf」の誤りです。
+</body>
+</html>
