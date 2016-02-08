@@ -1,0 +1,1459 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Language" content="ja">
+  <link href="../document.css" type="text/css" rel="stylesheet" />
+  <title>「たのしいRuby 第5版」プログラムリスト</title>
+  <script type="text/javascript" src="../sh/scripts/shCore.js"></script>
+  <script type="text/javascript" src="../sh/scripts/shBrushRuby.js"></script>
+  <link type="text/css" rel="stylesheet" href="../sh/styles/shCore.css"/>
+  <link type="text/css" rel="stylesheet" href="../sh/styles/shThemeEclipse.css" />
+  <script type="text/javascript">
+    SyntaxHighlighter.config.clipboardSwf = '../sh/scripts/clipboard.swf';
+    SyntaxHighlighter.config.strings.expandSource = 'ソースを見る';
+    SyntaxHighlighter.config.strings.viewSource = '別のウィンドウで表示';
+    SyntaxHighlighter.config.strings.copyToClipboard = 'クリップボードにコピー';
+    SyntaxHighlighter.config.strings.copyToClipboardConfirmation = 'コードがクリップボードにコピーされました';
+    SyntaxHighlighter.config.strings.print = '印刷';
+    SyntaxHighlighter.config.strings.help = 'ヘルプ';
+    SyntaxHighlighter.all(ch, );
+  </script>
+</head>
+<body>
+<h1>「たのしいRuby 第5版」プログラムリスト</h1>
+<div class="navigation">
+[<a href="#ch01">第1章</a>|<a href="#ch02">第2章</a>|<a href="#ch03">第3章</a>|<a href="#ch04">第4章</a>|<a href="#ch05">第5章</a>|<a href="#ch06">第6章</a>|<a href="#ch07">第7章</a>|<a href="#ch08">第8章</a>|<a href="#ch09">第9章</a>|<a href="#ch10">第10章</a>|<a href="#ch11">第11章</a>|<a href="#ch12">第12章</a>|<a href="#ch13">第13章</a>|<a href="#ch14">第14章</a>|<a href="#ch15">第15章</a>|<a href="#ch16">第16章</a>|<a href="#ch17">第17章</a>|<a href="#ch18">第18章</a>|<a href="#ch19">第19章</a>|<a href="#ch20">第20章</a>|<a href="#ch21">第21章</a>|<a href="#ch22">第22章</a>|<a href="#ch23">第23章</a>]
+</div>
+
+<h2 id="ch01">第1章 はじめてのRuby</h2>
+<h3>List 1.1 : helloruby.rb</h3>
+<pre class="brush: ruby">print(&quot;Hello, Ruby.\n&quot;)
+</pre>
+<h3>List 1.2 : puts_and_p.rb</h3>
+<pre class="brush: ruby">puts &quot;Hello,\n\tRuby.&quot;
+p &quot;Hello,\n\tRuby.&quot;
+</pre>
+<h3>List 1.3 : kiritsubo.rb</h3>
+<pre class="brush: ruby">print &quot;いづれの御時にか女御更衣あまたさぶらいたまいけるなかに\n&quot;
+print &quot;いとやむごとなき際にはあらぬがすぐれて時めきたまふありけり\n&quot;
+</pre>
+<h3>List 1.4 : area_volume.rb</h3>
+<pre class="brush: ruby">x = 10
+y = 20
+z = 30
+area = (x*y + y*z + z*x) * 2
+volume = x * y * z
+print &quot;表面積=&quot;, area, &quot;\n&quot;
+print &quot;体積=&quot;, volume, &quot;\n&quot;
+</pre>
+<h3>List 1.5 : comment_sample.rb</h3>
+<pre class="brush: ruby">=begin
+「たのしいRuby 第5版」サンプル
+コメントの使い方の例
+2006/06/16 作成
+2006/07/01 一部コメントを追加
+2015/10/01 第5版用に更新
+=end
+x = 10  # 横
+y = 20  # 縦
+z = 30  # 高さ
+# 表面積と体積を計算する
+area = (x*y + y*z + z*x) * 2
+volume = x * y * z
+# 出力する
+print &quot;表面積=&quot;, area, &quot;\n&quot;
+print &quot;体積=&quot;, volume, &quot;\n&quot;
+</pre>
+<h3>List 1.6 : greater_smaller.rb</h3>
+<pre class="brush: ruby">a = 20
+if a &gt;= 10 then
+  print &quot;greater\n&quot;
+end
+if a &lt;= 9 then
+  print &quot;smaller\n&quot;
+end
+</pre>
+<h3>List 1.7 : greater_smaller_else.rb</h3>
+<pre class="brush: ruby">a = 20
+if a &gt;= 10
+  print &quot;greater\n&quot;
+else
+  print &quot;smaller\n&quot;
+end
+</pre>
+
+<h2 id="ch02">第2章 便利なオブジェクト</h2>
+<p>ファイル名のあるソースコードはありません。</p>
+
+<h2 id="ch03">第3章 コマンドを作ろう</h2>
+<h3>List 3.1 : print_argv.rb</h3>
+<pre class="brush: ruby">puts &quot;最初の引数: #{ARGV[0]}&quot;
+puts &quot;2番目の引数: #{ARGV[1]}&quot;
+puts &quot;3番目の引数: #{ARGV[2]}&quot;
+puts &quot;4番目の引数: #{ARGV[3]}&quot;
+puts &quot;5番目の引数: #{ARGV[4]}&quot;
+</pre>
+<h3>List 3.2 : happy_birth.rb</h3>
+<pre class="brush: ruby">name = ARGV[0]
+print &quot;Happy Birthday, &quot;, name, &quot;!\n&quot;
+</pre>
+<h3>List 3.3 : arg_arith.rb</h3>
+<pre class="brush: ruby">num0 = ARGV[0].to_i
+num1 = ARGV[1].to_i
+puts &quot;#{num0} + #{num1} = #{num0 + num1}&quot;
+puts &quot;#{num0} - #{num1} = #{num0 - num1}&quot;
+puts &quot;#{num0} * #{num1} = #{num0 * num1}&quot;
+puts &quot;#{num0} / #{num1} = #{num0 / num1}&quot;
+</pre>
+<h3>List 3.4 : read_text.rb</h3>
+<pre class="brush: ruby">filename = ARGV[0]
+file = File.open(filename) # ① ファイルを開く
+text = file.read           # ② テキストデータを読み込む
+print text                 # ③ テキストデータを出力する
+file.close                 # ④ ファイルを閉じる
+</pre>
+<h3>List 3.5 : read_text_simple.rb</h3>
+<pre class="brush: ruby">filename = ARGV[0]
+text = File.read(filename)
+print text
+</pre>
+<h3>List 3.6 : read_text_oneline.rb</h3>
+<pre class="brush: ruby">print File.read(ARGV[0])
+</pre>
+<h3>List 3.7 : read_line.rb</h3>
+<pre class="brush: ruby">filename = ARGV[0]
+file = File.open(filename)
+file.each_line do |line|
+  print line
+end
+file.close
+</pre>
+<h3>List 3.8 : simple_grep.rb</h3>
+<pre class="brush: ruby">pattern = Regexp.new(ARGV[0])
+filename = ARGV[1]
+
+file = File.open(filename)
+file.each_line do |line|
+  if pattern =~ line
+    print line
+  end
+end
+file.close
+</pre>
+<h3>List 3.9 : hello_ruby2.rb</h3>
+<pre class="brush: ruby">def hello
+  puts &quot;Hello, Ruby.&quot;
+end
+
+hello()
+</pre>
+<h3>List 3.10 : grep.rb</h3>
+<pre class="brush: ruby">def simple_grep(pattern, filename)
+  file = File.open(filename)
+  file.each_line do |line|
+    if pattern =~ line
+      print line
+    end
+  end
+  file.close
+end
+</pre>
+<h3>List 3.11 : use_grep.rb</h3>
+<pre class="brush: ruby">require_relative &quot;grep&quot;         # grep.rbの読み込み（「.rb」は不要）
+
+pattern = Regexp.new(ARGV[0])
+filename = ARGV[1]
+simple_grep(pattern, filename)  # simple_grepメソッドの起動
+</pre>
+
+<h2 id="ch04">第4章 オブジェクトと変数・定数</h2>
+<h3>List 4.1 : scopetest.rb</h3>
+<pre class="brush: ruby">$x = 0
+x = 0
+
+require_relative &quot;sub&quot;
+
+p $x   #=&gt; 1
+p x    #=&gt; 0
+</pre>
+<h3>List 4.2 : sub.rb</h3>
+<pre class="brush: ruby">$x = 1  ## グローバル変数に代入
+x = 1   ## ローカル変数に代入
+</pre>
+
+<h2 id="ch05">第5章 条件判断</h2>
+<h3>List 5.1 : ad2heisei.rb</h3>
+<pre class="brush: ruby">#西暦から平成に変換する
+
+ad = ARGV[0].to_i
+heisei = ad - 1988
+puts heisei
+</pre>
+<h3>List 5.2 : if_elsif.rb</h3>
+<pre class="brush: ruby">a = 10
+b = 20
+if a &gt; b
+  puts &quot;aはbよりも大きい&quot;
+elsif a &lt; b
+  puts &quot;aはbよりも小さい&quot;
+else
+  puts &quot;aはbと同じ&quot;
+end
+</pre>
+<h3>List 5.3 : unless.rb</h3>
+<pre class="brush: ruby">a = 10
+b = 20
+unless a &gt; b
+  puts &quot;aはbより大きくない&quot;
+end
+</pre>
+<h3>List 5.4 : case.rb</h3>
+<pre class="brush: ruby">tags = [ &quot;A&quot;, &quot;IMG&quot;, &quot;PRE&quot; ]
+tags.each do |tagname|
+  case tagname
+  when &quot;P&quot;, &quot;A&quot;, &quot;I&quot;, &quot;B&quot;, &quot;BLOCKQUOTE&quot;
+    puts &quot;#{tagname} has child.&quot;
+  when &quot;IMG&quot;, &quot;BR&quot;
+    puts &quot;#{tagname} has no child.&quot;
+  else
+    puts &quot;#{tagname} cannot be used.&quot;
+  end
+end
+</pre>
+<h3>List 5.5 : case_class.rb</h3>
+<pre class="brush: ruby">array = [ &quot;a&quot;, 1, nil ]
+array.each do |item|
+  case item
+  when String
+    puts &quot;item is a String.&quot;
+  when Numeric
+    puts &quot;item is a Numeric.&quot;
+  else
+    puts &quot;item is something.&quot;
+  end
+end
+</pre>
+
+<h2 id="ch06">第6章 繰り返し</h2>
+<h3>List 6.1 : times.rb</h3>
+<pre class="brush: ruby">7.times do
+  puts &quot;いちめんのなのはな&quot;
+end
+</pre>
+<h3>List 6.2 : times2.rb</h3>
+<pre class="brush: ruby">5.times do |i|
+  puts &quot;#{i}回目の繰り返しです。&quot;
+end
+</pre>
+<h3>List 6.3 : times3.rb</h3>
+<pre class="brush: ruby">5.times do |i|
+  puts &quot;#{i+1}回目の繰り返しです。&quot;
+end
+</pre>
+<h3>List 6.4 : for.rb</h3>
+<pre class="brush: ruby">sum = 0
+for i in 1..5
+  sum = sum + i
+end
+puts sum
+</pre>
+<h3>List 6.5 : for_names.rb</h3>
+<pre class="brush: ruby">names = [&quot;awk&quot;, &quot;Perl&quot;, &quot;Python&quot;, &quot;Ruby&quot;]
+for name in names
+  puts name
+end
+</pre>
+<h3>List 6.6 : while.rb</h3>
+<pre class="brush: ruby">i = 1
+while i &lt; 3
+  puts i
+  i += 1
+end
+</pre>
+<h3>List 6.7 : while2.rb</h3>
+<pre class="brush: ruby">sum = 0
+i = 1
+while i &lt;= 5
+  sum += i
+  i += 1
+end
+puts sum
+</pre>
+<h3>List 6.8 : while3.rb</h3>
+<pre class="brush: ruby">sum = 0
+i = 1
+while sum &lt; 50
+  sum += i
+  i += 1
+end
+puts sum
+</pre>
+<h3>List 6.9 : until.rb</h3>
+<pre class="brush: ruby">sum = 0
+i = 1
+until sum &gt;= 50
+  sum += i
+  i+= 1
+end
+puts sum
+</pre>
+<h3>List 6.10 : while_not.rb</h3>
+<pre class="brush: ruby">sum = 0
+i = 1
+while !(sum &gt;= 50)
+  sum += i
+  i += 1
+end
+puts sum
+</pre>
+<h3>List 6.11 : each_names.rb</h3>
+<pre class="brush: ruby">names = [&quot;awk&quot;,&quot;Perl&quot;,&quot;Python&quot;,&quot;Ruby&quot;]
+names.each do |name|
+  puts name
+end
+</pre>
+<h3>List 6.12 : each.rb</h3>
+<pre class="brush: ruby">sum = 0
+(1..5).each do |i|
+  sum= sum + i
+end
+puts sum
+</pre>
+<h3>List 6.13 : break_next.rb</h3>
+<pre class="brush: ruby">puts &quot;breakの例:&quot;
+i = 0
+[&quot;Perl&quot;, &quot;Python&quot;, &quot;Ruby&quot;, &quot;Scheme&quot;].each do |lang|
+  i += 1
+  if i == 3
+    break
+  end
+  p [i, lang]
+end
+
+puts &quot;nextの例:&quot;
+i = 0
+[&quot;Perl&quot;, &quot;Python&quot;, &quot;Ruby&quot;, &quot;Scheme&quot;].each do |lang|
+  i += 1
+  if i == 3
+    next
+  end
+  p [i, lang]
+end
+</pre>
+<h3>List 6.14 : ten_lines_grep.rb</h3>
+<pre class="brush: ruby">pattern = Regexp.new(ARGV[0])
+filename = ARGV[1]
+max_matches = 10      # 出力する最大数
+matches = 0           # マッチした行数
+file = File.open(filename)
+file.each_line do |line|
+  if matches &gt;= max_matches
+    break
+  end
+  if pattern =~ line
+    matches += 1
+    puts line
+  end
+end
+file.close
+</pre>
+<h3>List 6.15 : strip.rb</h3>
+<pre class="brush: ruby">file = File.open(ARGV[0])
+file.each_line do |line|
+  next if /^\s*$/ =~ line  # 空白行
+  next if /^#/ =~ line     # シャープで始まる行
+  puts line
+end
+file.close
+</pre>
+<h3>List 6.16 : hello.rb</h3>
+<pre class="brush: ruby"># Hello, world
+puts(&quot;hello, world&quot;)
+
+# 日本語
+puts(&quot;こんにちは世界&quot;)
+
+# 中文
+puts(&quot;你好，世界&quot;)
+</pre>
+<h3>List 6.17 : stripped_hello.rb</h3>
+<pre class="brush: ruby">puts(&quot;hello, world&quot;)
+puts(&quot;こんにちは世界&quot;)
+puts(&quot;你好，世界&quot;)
+</pre>
+
+<h2 id="ch07">第7章 メソッド</h2>
+<h3>List 7.1 : times_with_param.rb</h3>
+<pre class="brush: ruby">5.times do |i|
+  puts &quot;#{i}回目の繰り返しです。&quot;
+end
+</pre>
+<h3>List 7.2 : hello_with_name.rb</h3>
+<pre class="brush: ruby">def hello(name)
+  puts &quot;Hello, #{name}.&quot;
+end
+
+hello(&quot;Ruby&quot;)
+</pre>
+<h3>List 7.3 : hello_with_default.rb</h3>
+<pre class="brush: ruby">def hello(name=&quot;Ruby&quot;)
+  puts &quot;Hello, #{name}.&quot;
+end
+
+hello()         # 引数を省略して呼び出す
+hello(&quot;Newbie&quot;) # 引数を指定して呼び出す
+</pre>
+<h3>List 7.4 : myloop.rb</h3>
+<pre class="brush: ruby">def myloop
+  while true
+    yield               # ブロックを実行する
+  end
+end
+
+num = 1                 # numを初期化する
+myloop do
+  puts &quot;num is #{num}&quot;  # numを表示する
+  break if num &gt; 10     # numが10を超えていたら抜ける
+  num *= 2              # numを2倍する
+end
+</pre>
+
+<h2 id="ch08">第8章 クラスとモジュール</h2>
+<h3>List 8.1 : hello_class.rb</h3>
+<pre class="brush: ruby">class HelloWorld                   # class文
+  def initialize(myname = &quot;Ruby&quot;)  # initializeメソッド
+    @name = myname                 # インスタンス変数の初期化
+  end
+
+  def hello                        # インスタンスメソッド
+    puts &quot;Hello, world. I am #{@name}.&quot;
+  end
+end
+
+bob = HelloWorld.new(&quot;Bob&quot;)
+alice = HelloWorld.new(&quot;Alice&quot;)
+ruby = HelloWorld.new
+
+bob.hello
+</pre>
+<h3>List 8.4 : hello_count.rb</h3>
+<pre class="brush: ruby">class HelloCount
+  @@count = 0           # helloメソッドの呼び出し回数
+
+  def HelloCount.count  # 呼び出し回数を参照するためのクラスメソッド
+    @@count
+  end
+
+  def initialize(myname=&quot;Ruby&quot;)
+    @name = myname
+  end
+
+  def hello
+    @@count += 1        # 呼び出し回数を加算する
+    puts &quot;Hello, world. I am #{@name}.\n&quot;
+  end
+end
+
+bob = HelloCount.new(&quot;Bob&quot;)
+alice = HelloCount.new(&quot;Alice&quot;)
+ruby = HelloCount.new
+
+p HelloCount.count      #=&gt; 0
+bob.hello
+alice.hello
+ruby.hello
+p HelloCount.count      #=&gt; 3
+</pre>
+<h3>List 8.5 : acc_test.rb</h3>
+<pre class="brush: ruby">class AccTest
+  def pub
+    puts &quot;pub is a public method.&quot;
+  end
+
+  public :pub   # pubメソッドをpublicに設定（指定しなくてもよい）
+
+  def priv
+    puts &quot;priv is a private method.&quot;
+  end
+
+  private :priv # privメソッドをprivateに設定
+end
+
+acc = AccTest.new
+acc.pub
+acc.priv
+</pre>
+<h3>List 8.6 : point.rb</h3>
+<pre class="brush: ruby">class Point
+  attr_accessor :x, :y   # アクセスメソッドを定義する
+  protected :x=, :y=     # x=とy=をprotectedにする
+
+  def initialize(x=0.0, y=0.0)
+    @x, @y = x, y
+  end
+
+  def swap(other)        # x、yの値を入れ替えるメソッド
+    tmp_x, tmp_y = @x, @y
+    @x, @y = other.x, other.y
+    other.x, other.y = tmp_x, tmp_y   # 同一クラス内では
+                                      # 呼び出すことができる
+    return self
+  end
+end
+
+p0 = Point.new
+p1 = Point.new(1.0, 2.0)
+p [ p0.x, p0.y ]         #=&gt; [0.0, 0.0]
+p [ p1.x, p1.y ]         #=&gt; [1.0, 2.0]
+
+p0.swap(p1)
+p [ p0.x, p0.y ]         #=&gt; [1.0, 2.0]
+p [ p1.x, p1.y ]         #=&gt; [0.0, 0.0]
+
+p0.x = 10.0              #=&gt; エラー（NoMethodError）
+</pre>
+<h3>List 8.7 : ext_string.rb</h3>
+<pre class="brush: ruby">class String
+  def count_word
+    ary = self.split(/\s+/) # selfを空白文字区切りで
+                            # 配列に分解する
+    return ary.size         # 分解後の配列の要素数を返す
+  end
+end
+
+str = &quot;Just Another Ruby Newbie&quot;
+p str.count_word            #=&gt; 4
+</pre>
+<h3>List 8.8 : ring_array.rb</h3>
+<pre class="brush: ruby">class RingArray &lt; Array  # スーパークラスを指定する
+  def [](i)              # 演算子[]の再定義
+    idx = i % size       # 新しいインデックスを求める
+    super(idx)           # スーパークラスの同名のメソッドを呼ぶ
+  end
+end
+
+wday = RingArray[&quot;日&quot;, &quot;月&quot;, &quot;火&quot;, &quot;水&quot;, &quot;木&quot;, &quot;金&quot;, &quot;土&quot;]
+p wday[6]   #=&gt; &quot;土&quot;
+p wday[11]  #=&gt; &quot;木&quot;
+p wday[15]  #=&gt; &quot;月&quot;
+p wday[-1]  #=&gt; &quot;土&quot;
+</pre>
+<h3>List 8.9 : alias_sample.rb</h3>
+<pre class="brush: ruby">class C1                 # C1クラスの定義
+  def hello              # helloを定義
+    &quot;Hello&quot;
+  end
+end
+
+class C2 &lt; C1            # C1クラスを継承してC2クラスを定義
+  alias old_hello hello  # 別名old_helloを設定
+
+  def hello              # helloを再定義
+    &quot;#{old_hello}, again&quot;
+  end
+end
+
+obj = C2.new
+p obj.old_hello          #=&gt; &quot;Hello&quot;
+p obj.hello              #=&gt; &quot;Hello, again&quot;
+</pre>
+<h3>List 8.10 : mixin_sample.rb</h3>
+<pre class="brush: ruby">module MyModule
+  # 共通して提供したいメソッドなど
+end
+
+class MyClass1
+  include MyModule
+  # MyClass1に固有のメソッドなど
+end
+
+class MyClass2
+  include MyModule
+  # MyClass2に固有のメソッドなど
+end
+</pre>
+<h3>List 8.11 : hello_module.rb</h3>
+<pre class="brush: ruby">module HelloModule          # module文
+  Version = &quot;1.0&quot;           # 定数の定義
+
+  def hello(name)           # メソッドの定義
+    puts &quot;Hello, #{name}.&quot;
+  end
+  module_function :hello    # helloをモジュール関数として公開する
+end
+
+p HelloModule::Version      #=&gt; &quot;1.0&quot;
+HelloModule.hello(&quot;Alice&quot;)  #=&gt; Hello, Alice.
+
+include HelloModule         # インクルードしてみる
+p Version                   #=&gt; &quot;1.0&quot;
+hello(&quot;Alice&quot;)              #=&gt; Hello, Alice.
+</pre>
+<h3>List 8.12 : mixin_test.rb</h3>
+<pre class="brush: ruby">module M
+  def meth
+    &quot;meth&quot;
+  end
+end
+
+class C
+  include M  # モジュールMをインクルードする
+end
+
+c = C.new
+p c.meth     #=&gt; meth
+</pre>
+<h3>List 8.13 : fetch_and_downcase.rb</h3>
+<pre class="brush: ruby">def fetch_and_downcase(ary, index)
+  if str = ary[index]
+    return str.downcase
+  end
+end
+
+ary = [&quot;Boo&quot;, &quot;Foo&quot;, &quot;Woo&quot;]
+p fetch_and_downcase(ary, 1)  #=&gt; &quot;foo&quot;
+</pre>
+<h3>List 8.14 : http_get.rb</h3>
+<pre class="brush: ruby">require &quot;net/http&quot;
+require &quot;uri&quot;
+url = URI.parse(&quot;http://www.ruby-lang.org/ja/&quot;)
+http = Net::HTTP.start(url.host, url.port)
+doc = http.get(url.path)
+puts doc.body
+</pre>
+
+<h2 id="ch09">第9章 演算子</h2>
+<h3>List 9.1 : point.rb</h3>
+<pre class="brush: ruby">class Point
+  attr_accessor :x, :y
+
+  def initialize(x=0, y=0)
+    @x, @y = x, y
+  end
+
+  def inspect  # pメソッドで「(x, y)」と表示する
+    &quot;(#{x}, #{y})&quot;
+  end
+
+  def +(other)  # x、yのそれぞれを足す
+    self.class.new(x + other.x, y + other.y)
+  end
+
+  def -(other)  # x、yのそれぞれを引く
+    self.class.new(x - other.x, y - other.y)
+  end
+end
+
+point0 = Point.new(3, 6)
+point1 = Point.new(1, 8)
+
+p point0           #=&gt; (3, 6)
+p point1           #=&gt; (1, 8)
+p point0 + point1  #=&gt; (4, 14)
+p point0 - point1  #=&gt; (2, -2)
+</pre>
+
+<h2 id="ch10">第10章 エラー処理と例外</h2>
+<h3>List 10.1 : wc.rb</h3>
+<pre class="brush: ruby">ltotal=0                             # 行数の合計
+wtotal=0                             # 単語数の合計
+ctotal=0                             # 文字数の合計
+ARGV.each do |file|
+  begin
+    input = File.open(file)          # ファイルを開く@&lt;b&gt;{（A）}
+    l=0                              # file内の行数
+    w=0                              # file内の単語数
+    c=0                              # file内の文字数
+    input.each_line do |line|
+      l += 1
+      c += line.size
+      line.sub!(/^\s+/, &quot;&quot;)          # 行頭の空白を削除
+      ary = line.split(/\s+/)        # 空白文字で分解する
+      w += ary.size
+    end
+    input.close                      # ファイルを閉じる
+    printf(&quot;%8d %8d %8d %s\n&quot;, l, w, c, file)  # 出力を整形する
+    ltotal += l
+    wtotal += w
+    ctotal += c
+  rescue =&gt; ex
+    print ex.message, &quot;\n&quot;           # 例外のメッセージを出力@&lt;b&gt;{（B）}
+  end
+end
+
+printf(&quot;%8d %8d %8d %s\n&quot;, ltotal, wtotal, ctotal, &quot;total&quot;)
+</pre>
+
+<h2 id="ch11">第11章 ブロック</h2>
+<h3>List 11.1 : hash_each.rb</h3>
+<pre class="brush: ruby">sum = 0
+outcome = {&quot;参加費&quot;=&gt;1000, &quot;ストラップ代&quot;=&gt;1000, &quot;懇親会会費&quot;=&gt;4000}
+outcome.each do |pair|
+  sum += pair[1]  # 値を指定している
+end
+puts &quot;合計 : #{sum}&quot;
+</pre>
+<h3>List 11.2 : hash_each2.rb</h3>
+<pre class="brush: ruby">sum = 0
+outcome = {&quot;参加費&quot;=&gt;1000, &quot;ストラップ代&quot;=&gt;1000, &quot;懇親会会費&quot;=&gt;4000}
+outcome.each do |item, price|
+  sum += price
+end
+puts &quot;合計 : #{sum}&quot;
+</pre>
+<h3>List 11.3 : file_each.rb</h3>
+<pre class="brush: ruby">file = File.open(&quot;sample.txt&quot;)
+file.each_line do |line|
+  print line
+end
+file.close
+</pre>
+<h3>List 11.4 : file_open.rb</h3>
+<pre class="brush: ruby">File.open(&quot;sample.txt&quot;) do |file|
+  file.each_line do |line|
+    print line
+  end
+end
+</pre>
+<h3>List 11.5 : file_open_no_block.rb</h3>
+<pre class="brush: ruby">file = File.open(&quot;sample.txt&quot;)
+begin
+  file.each_line do |line|
+    print line
+  end
+ensure
+  file.close
+end
+</pre>
+<h3>List 11.6 : sort_comp_count.rb</h3>
+<pre class="brush: ruby"># %w(...) は各単語を要素とする配列を生成するリテラルです
+ary = %w(
+  Ruby is a open source programming language with a focus
+  on simplicity and productivity. It has an elegant syntax
+  that is natural to read and easy to write
+)
+
+call_num = 0    # ブロックの呼び出し回数
+sorted = ary.sort do |a, b|
+  call_num += 1 # ブロックの呼び出し回数を加算する
+  a.length &lt;=&gt; b.length
+end
+
+puts &quot;ソートの結果 #{sorted}&quot;
+puts &quot;配列の要素数 #{ary.length}&quot;
+puts &quot;ブロックの呼び出し回数 #{call_num}&quot;
+</pre>
+<h3>List 11.7 : myloop.rb</h3>
+<pre class="brush: ruby">def myloop
+  while true
+    yield               # ブロックを実行する
+  end
+end
+
+num = 1                 # numを初期化する
+myloop do
+  puts &quot;num is #{num}&quot;  # numを表示する
+  break if num &gt; 10     # numが10を越えていたら抜ける
+  num *= 2              # numを2倍する
+end
+</pre>
+<h3>List 11.8 : total.rb</h3>
+<pre class="brush: ruby">def total(from, to)
+  result = 0                # 合計の値
+  from.upto(to) do |num|    # fromからtoまで処理する
+    if block_given?         #   ブロックがあれば
+      result += yield(num)  #     ブロックで処理した値を足す
+    else                    #   ブロックがなければ
+      result += num         #     そのまま足す
+    end
+  end
+  return result             # メソッドの結果を返す
+end
+
+p total(1, 10)                  # 1から10の和 =&gt; 55
+p total(1, 10){|num| num ** 2 } # 1から10の2乗の値の和 =&gt; 385
+</pre>
+<h3>List 11.9 : block_args_test.rb</h3>
+<pre class="brush: ruby">def block_args_test
+  yield()             # ブロック変数なし
+  yield(1)            # ブロック変数1つ
+  yield(1, 2, 3)      # ブロック変数3つ
+end
+
+puts &quot;ブロック変数を|a|で受け取る&quot;
+block_args_test do |a|
+  p [a]
+end
+puts
+
+puts &quot;ブロック変数を|a, b, c|で受け取る&quot;
+block_args_test do |a, b, c|
+  p [a, b, c]
+end
+puts
+
+puts &quot;ブロック変数を|*a|で受け取る&quot;
+block_args_test do |*a|
+  p [a]
+end
+puts
+</pre>
+<h3>List 11.10 : proc1.rb</h3>
+<pre class="brush: ruby">hello = Proc.new do |name|
+  puts &quot;Hello, #{name}.&quot;
+end
+
+hello.call(&quot;World&quot;)
+hello.call(&quot;Ruby&quot;)
+</pre>
+<h3>List 11.11 : total2.rb</h3>
+<pre class="brush: ruby">def total2(from, to, &amp;block)
+  result = 0               # 合計の値
+  from.upto(to) do |num|   # fromからtoまで処理する
+    if block               #   ブロックがあれば
+      result +=            #     ブロックで処理した値を足す
+           block.call(num)
+    else                   #   ブロックがなければ
+      result += num        #     そのまま足す
+    end
+  end
+  return result            # メソッドの結果を返す
+end
+
+p total2(1, 10)                   # 1から10の和 =&gt; 55
+p total2(1, 10){|num| num ** 2 }  # 1から10の2乗の値の和 =&gt; 385
+</pre>
+<h3>List 11.12 : call_each.rb</h3>
+<pre class="brush: ruby">def call_each(ary, &amp;block)
+  ary.each(&amp;block)
+end
+
+call_each [1, 2, 3] do |item|
+  p item
+end
+</pre>
+<h3>List 11.13 : local_and_block.rb</h3>
+<pre class="brush: ruby">x = 1            # xを初期化
+y = 1            # yを初期化
+ary = [1, 2, 3]
+
+ary.each do |x|  # ブロック変数としてxを使用する
+  y = x          # yにxを代入する
+end
+
+p [x, y]         # xとyの値を確認する
+</pre>
+<h3>List 11.14 : local_and_block2.rb</h3>
+<pre class="brush: ruby">x = y = z = 0       # xとyとzを初期化
+ary = [1, 2, 3]
+ary.each do |x; y|  # ブロック変数x、ブロックローカル変数yを使用
+  y = x             # ブロックローカル変数yを代入
+  z = x             # ブロックローカルでない変数zを代入
+  p [x, y, z]       # ブロック内のx、y、zの値を確認する
+end
+puts
+p [x, y, z]         # x、y、zの値を確認する
+</pre>
+
+<h2 id="ch12">第12章 数値（Numeric）クラス</h2>
+<p>ファイル名のあるソースコードはありません。</p>
+
+<h2 id="ch13">第13章 配列（Array）クラス</h2>
+<h3>List 13.1 : list.rb</h3>
+<pre class="brush: ruby">list = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]
+for i in 0..3
+  print i+1,&quot;番目の要素は&quot;,list[i],&quot;です。\n&quot;
+end
+</pre>
+<h3>List 13.2 : sum_list.rb</h3>
+<pre class="brush: ruby">list = [1, 3, 5, 7, 9]
+sum = 0
+for i in 0..4
+  sum += list[i]
+end
+print &quot;合計:&quot;,sum,&quot;\n&quot;
+</pre>
+<h3>List 13.3 : sum_list2.rb</h3>
+<pre class="brush: ruby">list = [1, 3, 5, 7, 9]
+sum = 0
+list.each do |elem|
+  sum += elem
+end
+print &quot;合計:&quot;,sum,&quot;\n&quot;
+</pre>
+<h3>List 13.4 : list2.rb</h3>
+<pre class="brush: ruby">list = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]
+list.each_with_index do |elem, i|
+  print i+1,&quot;番目の要素は&quot;,elem,&quot;です。\n&quot;
+end
+</pre>
+<h3>List 13.5 : sum_with_each.rb</h3>
+<pre class="brush: ruby">ary1 = [1, 2, 3, 4, 5]
+ary2 = [10, 20, 30, 40, 50]
+ary3 = [100, 200, 300, 400, 500]
+
+i = 0
+result = []
+while i &lt; ary1.length
+  result &lt;&lt; ary1[i] + ary2[i] + ary3[i]
+  i += 1
+end
+p result  #=&gt; [111, 222, 333, 444, 555]
+</pre>
+<h3>List 13.6 : sum_with_zip.rb</h3>
+<pre class="brush: ruby">ary1 = [1, 2, 3, 4, 5]
+ary2 = [10, 20, 30, 40, 50]
+ary3 = [100, 200, 300, 400, 500]
+
+result = []
+ary1.zip(ary2, ary3) do |a, b, c|
+  result &lt;&lt; a + b + c
+end
+p result  #=&gt; [111, 222, 333, 444, 555]
+</pre>
+
+<h2 id="ch14">第14章 文字列（String）クラス</h2>
+<h3>List 14.1 : frozen_string.rb</h3>
+<pre class="brush: ruby"># frozen-string-literal: true
+
+str = &quot;Ruby&quot;
+p str.upcase!
+</pre>
+
+<h2 id="ch15">第15章 ハッシュ（Hash）クラス</h2>
+<h3>List 15.1 : word_count.rb</h3>
+<pre class="brush: ruby"># 単語数のカウント
+count = Hash.new(0)
+
+## 単語の集計
+File.open(ARGV[0]) do |f|
+  f.each_line do |line|
+    words = line.split
+    words.each do |word|
+      count[word] += 1
+    end
+  end
+end
+
+## 結果の出力
+count.sort{|a, b|
+  a[1] &lt;=&gt; b[1]
+}.each do |key, value|
+  print &quot;#{key}: #{value}\n&quot;
+end
+</pre>
+
+<h2 id="ch16">第16章 正規表現（Regexp）クラス</h2>
+<h3>List 16.1 : scan1.rb</h3>
+<pre class="brush: ruby">&quot;abracatabra&quot;.scan(/.a/) do |matched|
+  p matched
+end
+</pre>
+<h3>List 16.2 : scan2.rb</h3>
+<pre class="brush: ruby">&quot;abracatabra&quot;.scan(/(.)(a)/) do |matched|
+  p matched
+end
+</pre>
+<h3>List 16.3 : scan3.rb</h3>
+<pre class="brush: ruby">&quot;abracatabra&quot;.scan(/(.)(a)/) do |a, b|
+  p a+&quot;-&quot;+b
+end
+</pre>
+<h3>List 16.4 : url_match.rb</h3>
+<pre class="brush: ruby">str = &quot;http://www.ruby-lang.org/ja/&quot;
+%r|http://([^/]*)/| =~ str
+print &quot;server address: &quot;, $1, &quot;\n&quot;
+</pre>
+
+<h2 id="ch17">第17章 IOクラス</h2>
+<h3>List 17.1 : out.rb</h3>
+<pre class="brush: ruby">3.times do |i|
+  $stdout.puts &quot;#{Random.rand}&quot;        # 標準出力へ
+  $stderr.puts &quot;#{i+1}回出力しました&quot;  # 標準エラー出力へ
+end
+</pre>
+<h3>List 17.2 : tty.rb</h3>
+<pre class="brush: ruby">if $stdin.tty? 
+  print &quot;Stdin is a TTY.\n&quot; 
+else 
+  print &quot;Stdin is not a TTY.\n&quot; 
+end
+</pre>
+<h3>List 17.3 : stdout_put.rb</h3>
+<pre class="brush: ruby">$stdout.puts &quot;String&quot;, :Symbol, 1/100r
+</pre>
+<h3>List 17.4 : stdout_putc.rb</h3>
+<pre class="brush: ruby">$stdout.putc(82)  # 82は「R」のASCIIコード
+$stdout.putc(&quot;Ruby&quot;)
+$stdout.putc(&quot;\n&quot;)
+</pre>
+<h3>List 17.5 : test_buffering1.rb</h3>
+<pre class="brush: ruby">filename = &quot;buffering.txt&quot;
+File.open(filename, &quot;w&quot;) do |file|
+  3.times do |i|
+    # 5バイト書き込むごとにファイルのサイズを調べる
+    file.write(&quot;a&quot; * 5)
+    puts &quot;#{i+1}回目: #{File.size(filename)}&quot;
+  end
+end
+puts &quot;終了後: #{File.size(filename)}&quot;  # もう一度調べる
+p File.read(filename)                  # 出力を確認する
+</pre>
+<h3>List 17.6 : test_buffering2.rb</h3>
+<pre class="brush: ruby">filename = &quot;buffering.txt&quot;
+File.open(filename, &quot;w&quot;) do |file|
+  3.times do |i|
+    # 5バイト書き込むごとにファイルのサイズを調べる
+    file.write(&quot;a&quot; * 5)
+    file.flush                         # 出力を反映する
+    puts &quot;#{i+1}回目: #{File.size(filename)}&quot;
+  end
+end
+puts &quot;終了後: #{File.size(filename)}&quot;  # もう一度調べる
+p File.read(filename)                  # 出力を確認する
+</pre>
+<h3>List 17.7 : test_buffering3.rb</h3>
+<pre class="brush: ruby">filename = &quot;buffering.txt&quot;
+File.open(filename, &quot;w&quot;) do |file|
+  file.sync = true                     # 出力を同期させる
+  3.times do |i|
+    # 5バイト書き込むごとにファイルのサイズを調べる
+    file.write(&quot;a&quot; * 5)
+    puts &quot;#{i+1}回目: #{File.size(filename)}&quot;
+  end
+end
+puts &quot;終了後: #{File.size(filename)}&quot;  # もう一度調べる
+p File.read(filename)                  # 出力を確認する
+</pre>
+<h3>List 17.8 : simple_grep_gz.rb</h3>
+<pre class="brush: ruby">pattern = Regexp.new(ARGV[0])
+filename = ARGV[1]
+if /.gz$/ =~ filename
+  file = IO.popen(&quot;zcat #{filename}&quot;)
+else
+  file = File.open(filename)
+end
+file.each_line do |line|
+  if pattern =~ line
+    print line
+  end
+end
+</pre>
+<h3>List 17.9 : read_uri.rb</h3>
+<pre class="brush: ruby">require &quot;open-uri&quot; 
+
+# HTTP経由でデータを読み込む 
+open(&quot;http://www.ruby-lang.org/ja/&quot;) do |io| 
+  puts io.read  # Rubyのホームページをコンソールに出力する 
+end 
+
+# FTP経由でデータを読み込む
+filename = &quot;ruby-2.3.0.tar.gz&quot;
+url = &quot;ftp://ftp.ruby-lang.org/pub/ruby/2.3/#{filename}&quot;
+open(url) do |io| 
+  File.binwrite(filename, io.read)  # ファイルに書き込む
+end
+</pre>
+<h3>List 17.10 : stringio_puts.rb</h3>
+<pre class="brush: ruby">require &quot;stringio&quot;
+
+io = StringIO.new
+io.puts(&quot;A&quot;)
+io.puts(&quot;B&quot;)
+io.puts(&quot;C&quot;)
+io.rewind
+p io.read  #=&gt; &quot;A\nB\nC\n&quot;
+</pre>
+<h3>List 17.11 : stringio_gets.rb</h3>
+<pre class="brush: ruby">require &quot;stringio&quot;
+
+io = StringIO.new(&quot;A\nB\nC\n&quot;)
+p io.gets  #=&gt; &quot;A\n&quot;
+p io.gets  #=&gt; &quot;B\n&quot;
+p io.gets  #=&gt; &quot;C\n&quot;
+</pre>
+
+<h2 id="ch18">第18章 FileクラスとDirクラス</h2>
+<h3>List 18.1 : traverse.rb</h3>
+<pre class="brush: ruby">def traverse(path)
+  if File.directory?(path)  # ディレクトリの場合
+    dir = Dir.open(path)
+    while name = dir.read
+      next if name == &quot;.&quot;   # ※
+      next if name == &quot;..&quot;  # ※
+      traverse(path + &quot;/&quot; + name)
+    end
+    dir.close
+  else
+    process_file(path)      # ファイルに対する処理
+  end
+end
+
+def process_file(path)
+  puts path                 # ひとまず出力するだけ
+end
+
+traverse(ARGV[0])
+</pre>
+<h3>List 18.2 : traverse_by_glob.rb</h3>
+<pre class="brush: ruby">def traverse(path)
+  Dir.glob([&quot;#{path}/**/*&quot;, &quot;#{path}/**/.*&quot;]).each do |name|
+    unless File.directory?(name)
+      process_file(name)
+    end
+  end
+end
+</pre>
+<h3>List 18.3 : listdir.rb</h3>
+<pre class="brush: ruby">require &#39;find&#39;
+
+IGNORES = [ /^\./, /^\.svn$/, /^\.git$/ ]
+
+def listdir(top)
+  Find.find(top) do |path|
+    if FileTest.directory?(path)  # pathがディレクトリならば
+      dir, base = File.split(path)
+      IGNORES.each do |re|
+        if re =~ base             # 無視したいディレクトリの場合
+          Find.prune              # それ以下の検索を省略する
+        end
+      end
+      puts path                   # 出力する
+    end
+  end
+end
+
+listdir(ARGV[0])
+</pre>
+
+<h2 id="ch19">第19章 エンコーディング（Encoding）クラス</h2>
+<p>ファイル名のあるソースコードはありません。</p>
+
+<h2 id="ch20">第20章 TimeクラスとDateクラス</h2>
+<p>ファイル名のあるソースコードはありません。</p>
+
+<h2 id="ch21">第21章 Procクラス</h2>
+<h3>List 21.1 : power_of.rb</h3>
+<pre class="brush: ruby">def power_of(n)
+  lambda do |x|
+    return x ** n
+  end
+end
+
+cube = power_of(3)
+p cube.call(5)  #=&gt; 125
+</pre>
+<h3>List 21.2 : prefix.rb</h3>
+<pre class="brush: ruby">def prefix(ary, obj)
+  result = []                # 結果の配列を初期化する
+  ary.each do |item|         # 要素を1つずつ見ながら
+    result &lt;&lt; item           # 要素を結果の配列に追加する
+    if item == obj           # 要素が条件に一致するものがあれば
+      return result          # 結果の配列を返す
+    end
+  end
+  return result              # すべての要素を検査し終わった場合
+end
+
+p prefix([1, 2, 3, 4, 5], 3) #=&gt; [1, 2, 3]
+</pre>
+<h3>List 21.3 : total2.rb</h3>
+<pre class="brush: ruby">def total2(from, to, &amp;block)
+  result = 0               # 合計の値
+  from.upto(to) do |num|   # fromからtoまで処理する
+    if block               #   ブロックがあれば
+      result +=            #     ブロックで処理した値を足す
+           block.call(num)
+    else                   #   ブロックがなければ
+      result += num        #     そのまま足す
+    end
+  end
+  return result            # メソッドの結果を返す
+end
+
+p total2(1, 10)                   # 1から10の和 =&gt; 55
+p total2(1, 10){|num| num ** 2 }  # 1から10の2乗の値の和 =&gt; 385
+</pre>
+<h3>List 21.4 : counter_proc.rb</h3>
+<pre class="brush: ruby">def counter
+  c = 0          # カウンターを初期化する
+  Proc.new do    # callメソッドを呼ぶたびにカウンターに
+    c += 1       # 1を足して返すProcオブジェクトを返す
+  end
+end
+
+# カウンターc1を作成してカウントアップする
+c1 = counter
+p c1.call      #=&gt; 1
+p c1.call      #=&gt; 2
+p c1.call      #=&gt; 3
+
+# カウンターc2を作成してカウントアップする
+c2 = counter   # カウンターc2を作成
+p c2.call      #=&gt; 1
+p c2.call      #=&gt; 2
+
+# 再びc1をカウントアップする
+p c1.call      #=&gt; 4
+</pre>
+<h3>List 21.5 : proc_source_location.rb</h3>
+<pre class="brush: ruby">prc0 = Proc.new{ nil }
+prc1 = Proc.new{|a| a }
+
+p prc0.source_location
+p prc1.source_location
+</pre>
+
+<h2 id="ch22">第22章 テキスト処理を行う</h2>
+<h3>List 22.1 : get_nisen.rb</h3>
+<pre class="brush: ruby">require &quot;open-uri&quot;
+
+url = &quot;http://www.aozora.gr.jp/cards/001779/files/56647_58167.html&quot;
+filename = &quot;nisendouka.html&quot;
+
+File.open(filename, &quot;wb&quot;) do |f|
+  text = open(url, &quot;r:shift_jis&quot;).read
+  f.write text                   # Shift_JIS環境（Windows）の場合
+  #f.write text.encode(&quot;utf-8&quot;)  # UTF-8を使う環境はこちら
+end
+</pre>
+<h3>List 22.2 : cut_nisen.rb</h3>
+<pre class="brush: ruby">htmlfile = &quot;nisendouka.html&quot;
+textfile = &quot;nisendouka.txt&quot;
+
+html = File.read(htmlfile)
+
+File.open(textfile, &quot;w&quot;) do |f|
+  in_header = true
+  html.each_line do |line|
+    if in_header &amp;&amp; /&lt;div class=&quot;main_text&quot;&gt;/ !~ line
+      next
+    else
+      in_header = false
+    end
+    break if /&lt;div class=&quot;bibliographical_information&quot;&gt;/ =~ line
+    f.write line
+  end
+end
+</pre>
+<h3>List 22.3 : cut_nisen2.rb</h3>
+<pre class="brush: ruby">require &#39;cgi/util&#39;
+htmlfile = &quot;nisendouka.html&quot;
+textfile = &quot;nisendouka.txt&quot;
+
+html = File.read(htmlfile)
+
+File.open(textfile, &quot;w&quot;) do |f|
+  in_header = true
+  html.each_line do |line|
+    if in_header &amp;&amp; /&lt;div class=&quot;main_text&quot;&gt;/ !~ line
+      next
+    else
+      in_header = false
+    end
+    break if /&lt;div class=&quot;bibliographical_information&quot;&gt;/ =~ line
+    line.gsub!(/&lt;[^&gt;]+&gt;/, &#39;&#39;)
+    esc_line = CGI.unescapeHTML(line)
+    f.write esc_line
+  end
+end
+</pre>
+<h3>List 22.4 : simple_grep.rb</h3>
+<pre class="brush: ruby">pattern = Regexp.new(ARGV[0])
+filename = ARGV[1]
+
+File.open(filename) do |file|
+  file.each_line do |line|
+    if pattern =~ line
+      print line
+    end
+  end
+end
+</pre>
+<h3>List 22.5 : simple_scan.rb</h3>
+<pre class="brush: ruby">pattern = Regexp.new(ARGV[0])
+filename = ARGV[1]
+
+count = 0
+File.open(filename) do |file|
+  file.each_line do |line|
+    if pattern =~ line
+      line.scan(pattern) do |s|
+        count += 1
+      end
+      print line
+    end
+  end
+end
+puts &quot;count: #{count}&quot;
+</pre>
+<h3>List 22.6 : simple_count.rb</h3>
+<pre class="brush: ruby">pattern = Regexp.new(ARGV[0])
+filename = ARGV[1]
+
+count = 0
+File.read(filename).scan(pattern) do |s|
+  count += 1
+end
+puts &quot;count: #{count}&quot;
+</pre>
+<h3>List 22.7 : simple_match.rb</h3>
+<pre class="brush: ruby">pattern = Regexp.new(ARGV[0])
+filename = ARGV[1]
+
+count = 0
+File.open(filename) do |file|
+  file.each_line do |line|
+    if pattern =~ line
+      line.scan(pattern) do |s|
+        count += 1
+      end
+      print line.gsub(pattern){|str| &quot;&lt;&lt;#{str}&gt;&gt;&quot;}
+    end
+  end
+end
+puts &quot;count: #{count}&quot;
+</pre>
+<h3>List 22.8 : simple_match2.rb</h3>
+<pre class="brush: ruby">pattern = Regexp.new(&quot;(.{10})(&quot;+ARGV[0]+&quot;)(.{10})&quot;)
+filename = ARGV[1]
+
+count = 0
+File.open(filename) do |file|
+  file.each_line do |line|
+    line.scan(pattern) do |s|
+      puts &quot;#{s[0]}&lt;&lt;#{s[1]}&gt;&gt;#{s[2]}&quot;
+      count += 1
+    end
+  end
+end
+puts &quot;count: #{count}&quot;
+</pre>
+<h3>List 22.9 : simple_match3.rb</h3>
+<pre class="brush: ruby">pattern = Regexp.new(ARGV[0])
+filename = ARGV[1]
+
+count = 0
+File.open(filename) do |file|
+  file.each_line do |line|
+    line.scan(pattern) do |s|
+      pre = $`
+      post = $&#39;
+      puts &quot;#{pre[-10,10]}&lt;&lt;#{s}&gt;&gt;#{post[0,10]}&quot;
+      count += 1
+    end
+  end
+end
+puts &quot;count: #{count}&quot;
+</pre>
+<h3>List 22.10 : simple_match4.rb</h3>
+<pre class="brush: ruby">pattern = Regexp.new(ARGV[0])
+filename = ARGV[1]
+len = ARGV[2].to_i
+
+count = 0
+File.open(filename) do |file|
+  file.each_line do |line|
+    line.scan(pattern) do |s|
+      pre = $`
+      post = $&#39;
+      puts &quot;#{pre[-len,len]}&lt;&lt;#{s}&gt;&gt;#{post[0,len]}&quot;
+      count += 1
+    end
+  end
+end
+puts &quot;count: #{count}&quot;
+</pre>
+
+<h2 id="ch23">第23章 郵便番号データを検索する</h2>
+<h3>List 23.1 : read_csv.rb</h3>
+<pre class="brush: ruby">require &quot;csv&quot;            # csvライブラリを使う
+
+code = ARGV[0]           # 引数を取り出す
+start_time = Time.now    # 処理の開始時刻を取得する
+
+# Shift_JISをUTF-8に変換する指定をしてCSVファイルを開く
+CSV.open(&quot;KEN_ALL.CSV&quot;,&quot;r:Shift_JIS:UTF-8&quot;) do |csv|
+  csv.each do |record|
+    # 郵便番号が引数の指定と一致したらそのレコードを表示する
+    puts record.join(&quot; &quot;) if record[2] == code
+  end
+end
+p Time.now - start_time  # 処理が終了した時刻との差を表示する
+</pre>
+<h3>List 23.2 23.3: jzipcode.rb</h3>
+<pre class="brush: ruby">require &#39;sqlite3&#39;
+require &quot;csv&quot;
+
+class JZipCode
+  CSV_COLUMN = {code: 2, pref: 6, city: 7, addr: 8}
+
+  def initialize(dbfile)
+    @dbfile = dbfile
+  end
+
+  def create(zipfile)
+    return if File.exist?(@dbfile)
+    SQLite3::Database.open(@dbfile) do |db|
+      db.execute(&lt;&lt;-SQL)
+        CREATE TABLE IF NOT EXISTS zip_codes
+          (code TEXT, pref TEXT, city TEXT, addr TEXT, alladdr TEXT)
+      SQL
+      db.execute(&quot;BEGIN TRANSACTION&quot;)
+      CSV.open(zipfile, &quot;r:Shift_JIS:UTF-8&quot;) do |csv|
+        csv.each do |rec|
+          data = Hash.new
+          CSV_COLUMN.each{|key, index| data[key] = rec[index] }
+          data[:alladdr] = data[:pref] + data[:city] + data[:addr]
+          db.execute(&lt;&lt;-SQL, data)
+            INSERT INTO zip_codes VALUES
+              (:code, :pref, :city, :addr, :alladdr)
+          SQL
+        end
+      end
+      db.execute(&quot;COMMIT TRANSACTION&quot;)
+    end
+    return true
+  end
+
+  def find_by_code(code)
+    ret = []
+    SQLite3::Database.open(@dbfile) do |db|
+      db.execute(&lt;&lt;-SQL, code){|row| ret &lt;&lt; row.join(&quot; &quot;) }
+        SELECT code, alladdr
+          FROM zip_codes
+         WHERE code = ?
+      SQL
+    end
+    return ret.map{|line| line + &quot;\n&quot;}.join  
+  end
+
+  def find_by_address(addr)
+    ret = []
+    SQLite3::Database.open(@dbfile) do |db|
+      like = &quot;%#{addr}%&quot;
+      db.execute(&lt;&lt;-SQL, like){|row| ret &lt;&lt; row.join(&quot; &quot;) }
+        SELECT code, alladdr
+          FROM zip_codes
+         WHERE alladdr LIKE ?
+      SQL
+    end
+    return ret.map{|line| line + &quot;\n&quot;}.join  
+  end
+end
+
+if __FILE__ == $0
+  dbfile = &quot;jzipcode.db&quot;
+  jzipcode = JZipCode.new(dbfile)
+  jzipcode.create(&quot;KEN_ALL.CSV&quot;)
+  puts jzipcode.find_by_code(&quot;3210202&quot;)
+  puts jzipcode.find_by_address(&quot;猫屋敷&quot;)
+end
+</pre>
+
+<hr />
+</body>
+</html>
