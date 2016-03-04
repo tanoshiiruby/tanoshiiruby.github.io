@@ -33,5 +33,9 @@ module Calendar
   end
 end
 
-t = Date.today
-Calendar.cal(t.year, t.month)
+if arg = ARGV.first
+  d = Date.parse(arg)
+else
+  d = Date.today
+end
+Calendar.cal(d.year, d.month)
