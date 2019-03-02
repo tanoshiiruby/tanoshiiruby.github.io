@@ -68,14 +68,24 @@
               </div>
             </div>
             <div class="column is-6-desktop">
-              <figure class="is-clearfix">
-                <img src="images/cover_m.jpg">
+              <figure>
+                <a class="modal-button" data-target="modal-cover"><img src="images/cover_m.jpg" alt="表紙"></a>
               </figure>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <div id="modal-cover" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <figure class="image">
+          <img src="images/cover_m.jpg" alt="表紙">
+        </figure>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
 
     <section class="section" id="about">
       <div class="container">
