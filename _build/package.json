@@ -65,6 +65,7 @@
     "deploy": "npm run css-deploy && npm run js-build",
     "js-build": "babel _javascript --out-dir lib",
     "js-watch": "npm run js-build -- --watch",
+    "copy": "./copy.sh",
     "start": "npm-run-all --parallel css-watch js-watch"
   },
   "version": "0.0.3"
