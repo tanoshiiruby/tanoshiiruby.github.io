@@ -52033,7 +52033,7 @@ Opal.modules["opal-parser"] = function(Opal) {
   if ($gvars.stdout == null) $gvars.stdout = nil;
   if ($gvars.app == null) $gvars.app = nil;
 
-  Opal.add_stubs(['$require', '$item', '$code', '$eval', '$result', '$+', '$chomp', '$to_s', '$private', '$inspect', '$clear', '$Native', '$o', '$lambda', '$edit_code', '$actions', '$value', '$target', '$create_terminal', '$ev_code', '$clear_terminal', '$writeln', '$write', '$debug_trace=', '$-', '$new', '$each', '$output', '$last', '$run']);
+  Opal.add_stubs(['$require', '$item', '$code', '$eval', '$result', '$+', '$chomp', '$to_s', '$private', '$inspect', '$writeln', '$clear', '$Native', '$write', '$o', '$lambda', '$edit_code', '$actions', '$value', '$target', '$create_terminal', '$ev_code', '$clear_terminal', '$debug_trace=', '$-', '$new', '$each', '$output', '$last', '$run']);
   
   self.$require("ovto");
   self.$require("opal");
@@ -52153,9 +52153,19 @@ Opal.modules["opal-parser"] = function(Opal) {
       
       
       Opal.defn(self, '$ev_code', TMP_MainComponent_ev_code_5 = function $$ev_code(code) {
-        var self = this;
+        var self = this, err = nil;
+        if ($gvars.term == null) $gvars.term = nil;
 
-        return Opal.const_get_relative($nesting, 'Opal').$eval(code)
+        
+        try {
+          return Opal.const_get_relative($nesting, 'Kernel').$eval(code)
+        } catch ($err) {
+          if (Opal.rescue($err, [Opal.const_get_relative($nesting, 'Exception'), Opal.const_get_relative($nesting, 'NoMethodError')])) {err = $err;
+            try {
+              return $gvars.term.$writeln($rb_plus("ERROR: ", err.$inspect()))
+            } finally { Opal.pop_exception() }
+          } else { throw $err; }
+        };
       }, TMP_MainComponent_ev_code_5.$$arity = 1);
       
       Opal.defn(self, '$clear_terminal', TMP_MainComponent_clear_terminal_6 = function $$clear_terminal() {
@@ -52185,7 +52195,8 @@ Opal.modules["opal-parser"] = function(Opal) {
              term.setOption('convertEol', true);
              term.fit();
         ;
-          return ($gvars.term = self.$Native(term));
+          $gvars.term = self.$Native(term);
+          return $gvars.term.$write("\r");
         };
       }, TMP_MainComponent_create_terminal_7.$$arity = 0);
       return (Opal.defn(self, '$render', TMP_MainComponent_render_38 = function $$render($kwargs) {
