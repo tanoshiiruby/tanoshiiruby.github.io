@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+$mahogany: #42313a;
+$mahogany-invert: #fff;
+$chestnut: #6c2d2c;
+$chestnut-invert: #fff;
+$leather: #9f4636;
+$leather-invert: #fff;
+$parchment: #f1dcc9;
+$parchment-invert: #666;
+
+$primary: $mahogany;
+$primary-invert: $mahogany-invert;
+
+$info: $chestnut;
+$info-invert: $chestnut-invert;
+
+$navbar-breakpoint: $tablet;
+
+.section-heading {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+/* for terminal of opal */
+div#terminal {
+  height: 200px;
+  margin: 0 auto;
+  padding: 2px;
+}
+
+@import "../node_modules/bulma/bulma";
