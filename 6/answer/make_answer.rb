@@ -10,5 +10,5 @@ end
 filename = "index.rhtml"
 erb = ERB.new(File.read(filename))
 erb.filename = filename
-$> = open("index.html", "w")
+$> = open("../answer.html", "w")
 erb.run
