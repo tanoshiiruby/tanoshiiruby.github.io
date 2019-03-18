@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Language" content="ja">
+  <title>「たのしいRuby 第6版」プログラムリスト</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="sh/scripts/shCore.js"></script>
+  <script type="text/javascript" src="sh/scripts/shBrushRuby.js"></script>
+  <link type="text/css" rel="stylesheet" href="sh/styles/shCore.css"/>
+  <link type="text/css" rel="stylesheet" href="sh/styles/shThemeEclipse.css" />
+  <script type="text/javascript">
+    SyntaxHighlighter.config.strings.viewSource = '別のウィンドウで表示';
+    SyntaxHighlighter.config.strings.copyToClipboard = 'クリップボードにコピー';
+    SyntaxHighlighter.config.strings.copyToClipboardConfirmation = 'コードがクリップボードにコピーされました';
+    SyntaxHighlighter.config.strings.print = '印刷';
+    SyntaxHighlighter.config.strings.help = 'ヘルプ';
+    SyntaxHighlighter.all();
+  </script>
+</head>
+<body>
+    <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasic" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="index.html">
+            たのしいRuby 第6版
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <a class="navbar-item" href="index.html">HOME</a>
+          <a class="navbar-item" href="#about">本書について</a>
+          <a class="navbar-item" href="#toc">目次</a>
+          <a class="navbar-item" href="#rel">関連ページ</a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <p class="navbar-link">サポート情報</p>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="eratta.html">正誤表</a>
+              <a class="navbar-item" href="answer.html">練習問題の回答</a>
+              <a class="navbar-item" href="list.html">プログラムリスト</a>
+              <hr class="navbar-divider">
+              <a class="navbar-item" href="opal.html">ブラウザでRuby(Opal)</a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+              <h1>「たのしいRuby 第6版」プログラムリスト</h1>
+              <p>
+                [<a href="#ch01">第1章</a>|
+                <a href="#ch02">第2章</a>|
+                <a href="#ch03">第3章</a>|
+                <a href="#ch04">第4章</a>|
+                <a href="#ch05">第5章</a>|
+                <a href="#ch06">第6章</a>|
+                <a href="#ch07">第7章</a>|
+                <a href="#ch08">第8章</a>|
+                <a href="#ch09">第9章</a>|
+                <a href="#ch10">第10章</a>|
+                <a href="#ch11">第11章</a>|
+                <a href="#ch12">第12章</a>|
+                <a href="#ch13">第13章</a>|
+                <a href="#ch14">第14章</a>|
+                <a href="#ch15">第15章</a>|
+                <a href="#ch16">第16章</a>|
+                <a href="#ch17">第17章</a>|
+                <a href="#ch18">第18章</a>|
+                <a href="#ch19">第19章</a>|
+                <a href="#ch20">第20章</a>|
+                <a href="#ch21">第21章</a>|
+                <a href="#ch22">第22章</a>|
+                <a href="#ch23">第23章</a>]
+              </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section has-background-white-ter" id="part1_hajimete">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第1章 はじめてのRuby</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <h3>List 1.1 : helloruby.rb</h3>
+              <%= _("part1_hajimete/helloruby.rb") %>
+              <h3>List 1.2 : put_and_p.rb</h3>
+              <%= _("part1_hajimete/puts_and_p.rb") %>
+              <h3>List 1.3 : kiritsubo.rb</h3>
+              <%= _("part1_hajimete/kiritsubo.rb") %>
+              <h3>List 1.4 : area_volume.rb</h3>
+              <%= _("part1_hajimete/area_volume.rb") %>
+              <h3>List 1.5 : comment_sample.rb</h3>
+              <%= _("part1_hajimete/comment_sample.rb") %>
+              <h3>List 1.6 : bigger_smaller.rb</h3>
+              <%= _("part1_hajimete/greater_smaller.rb") %>
+              <h3>List 1.7 : bigger_smaller_else.rb</h3>
+              <%= _("part1_hajimete/greater_smaller_else.rb") %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ch02">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+              <h2>第2章 便利なオブジェクト</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+              <p>ファイル名のあるソースコードはありません。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section has-background-white-ter" id="ch03">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第3章 コマンドを作ろう</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <h3>List 3.1 : puts_argv.rb</h3>
+              <%= _("part1_command/puts_argv.rb") %>
+              <h3>List 3.2 : happy_birth.rb</h3>
+              <%= _("part1_command/happy_birth.rb") %>
+              <h3>List 3.3 : arg_arith.rb</h3>
+              <%= _("part1_command/arg_arith.rb") %>
+              <h3>List 3.4 : read_text.rb</h3>
+              <%= _("part1_command/read_text.rb") %>
+              <h3>List 3.5 : read_text_simple.rb</h3>
+              <%= _("part1_command/read_text_simple.rb") %>
+              <h3>List 3.6 : read_text_oneline.rb</h3>
+              <%= _("part1_command/read_text_oneline.rb") %>
+              <h3>List 3.7 : read_line.rb</h3>
+              <%= _("part1_command/read_line.rb") %>
+              <h3>List 3.8 : simple_grep.rb</h3>
+              <%= _("part1_command/simple_grep.rb") %>
+              <h3>List 3.9 : hello_ruby2.rb</h3>
+              <%= _("part1_command/hello_ruby2.rb") %>
+              <h3>List 3.10 : grep.rb</h3>
+              <%= _("part1_command/grep.rb") %>
+              <h3>List 3.11 : use_grep.rb</h3>
+              <%= _("part1_command/use_grep.rb") %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ch04">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第4章 オブジェクトと変数・定数</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+
+              <h3>List 4.1 : scopetest.rb</h3>
+              <%= _("part2_variable/scopetest.rb") %>
+              <h3>List 4.2 : sub.rb</h3>
+              <%= _("part2_variable/sub.rb") %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section has-background-white-ter" id="ch05">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第5章 条件判断</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+
+              <h3>List 5.1 : ad2age.rb</h3>
+              <%= _("part2_branch/ad2age.rb") %>
+              <h3>List 5.2 : if_elsif.rb</h3>
+              <%= _("part2_branch/if_elsif.rb") %>
+              <h3>List 5.3 : unless.rb</h3>
+              <%= _("part2_branch/unless.rb") %>
+              <h3>List 5.4 : case.rb</h3>
+              <%= _("part2_branch/case.rb") %>
+              <h3>List 5.5 : case_class.rb</h3>
+              <%= _("part2_branch/case_class.rb") %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="ch06">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第6章 繰り返し</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <h3>List 6.1 : times.rb</h3>
+              <%= _("part2_loop/times.rb") %>
+              <h3>List 6.2 : times2.rb</h3>
+              <%= _("part2_loop/times2.rb") %>
+              <h3>List 6.3 : times3.rb</h3>
+              <%= _("part2_loop/times3.rb") %>
+              <h3>List 6.4 : for.rb</h3>
+              <%= _("part2_loop/for.rb") %>
+              <h3>List 6.5 : for_names.rb</h3>
+              <%= _("part2_loop/for_names.rb") %>
+              <h3>List 6.6 : while.rb</h3>
+              <%= _("part2_loop/while.rb") %>
+              <h3>List 6.7 : while2.rb</h3>
+              <%= _("part2_loop/while2.rb") %>
+              <h3>List 6.8 : while3.rb</h3>
+              <%= _("part2_loop/while3.rb") %>
+              <h3>List 6.9 : until.rb</h3>
+              <%= _("part2_loop/until.rb") %>
+              <h3>List 6.10 : while_not.rb</h3>
+              <%= _("part2_loop/while_not.rb") %>
+              <h3>List 6.11 : each_names.rb</h3>
+              <%= _("part2_loop/each_names.rb") %>
+              <h3>List 6.12 : each.rb</h3>
+              <%= _("part2_loop/each.rb") %>
+              <h3>List 6.13 : break_next.rb</h3>
+              <%= _("part2_loop/break_next.rb") %>
+              <h3>List 6.14 : ten_lines_grep.rb</h3>
+              <%= _("part2_loop/ten_lines_grep.rb") %>
+              <h3>List 6.15 : strip.rb</h3>
+              <%= _("part2_loop/strip.rb") %>
+              <h3>List 6.16 : hello.rb</h3>
+              <%= _("part2_loop/hello.rb") %>
+              <h3>List 6.17 : stripped_hello.rb</h3>
+              <%= _("part2_loop/stripped_hello.rb") %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section has-background-white-ter" id="ch07">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第7章 メソッド</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <h3>List 7.1 : times_with_param.rb</h3>
+              <%= _("part2_method/times_with_param.rb") %>
+              <h3>List 7.2 : hello_with_name.rb</h3>
+              <%= _("part2_method/hello_with_name.rb") %>
+              <h3>List 7.3 : hello_with_default.rb</h3>
+              <%= _("part2_method/hello_with_default.rb") %>
+              <h3>List 7.4 : myloop.rb</h3>
+              <%= _("part2_method/myloop.rb") %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="ch08">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第8章 クラスとモジュール </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <h3>List 8.1 : receipt.rb</h3>
+              <%= _("part2_class/receipt.rb") %>
+              <h3>List 8.2 : receipt.rb（抜粋）</h3>
+              <%= _("part2_class/receipt2.rb") %>
+              <h3>List 8.3 : receipt.rb（抜粋）</h3>
+              <%= _("part2_class/receipt3.rb") %>
+              <h3>List 8.4 : receipt_count.rb</h3>
+              <%= _("part2_class/receipt_count.rb") %>
+              <h3>List 8.5 : access_test.rb</h3>
+              <%= _("part2_class/access_test.rb") %>
+              <h3>List 8.6 : point.rb</h3>
+              <%= _("part2_class/point.rb") %>
+              <h3>List 8.7 : ext_string.rb</h3>
+              <%= _("part2_class/ext_string.rb") %>
+              <h3>List 8.8 : ring_array.rb</h3>
+              <%= _("part2_class/ring_array.rb") %>
+              <h3>List 8.9 : alias_sample.rb</h3>
+              <%= _("part2_class/alias_sample.rb") %>
+              <h3>List 8.10 : mixin_sample.rb</h3>
+              <%= _("part2_class/mixin_sample.rb") %>
+              <h3>List 8.11 : hello_module.rb</h3>
+              <%= _("part2_class/hello_module.rb") %>
+              <h3>List 8.12 : mixin_test.rb</h3>
+              <%= _("part2_class/mixin_test.rb") %>
+              <h3>List 8.13 : prepend_test.rb</h3>
+              <%= _("part2_class/prepend_test.rb") %>
+              <h3>List 8.14 : fetch_and_downcase.rb</h3>
+              <%= _("part2_class/fetch_and_downcase.rb") %>
+              <h3>List 8.15 : http_get.rb</h3>
+              <%= _("part2_class/http_get.rb") %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section has-background-white-ter" id="ch09">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第9章 演算子</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <h3>List 9.1 : point.rb</h3>
+              <%= _("part2_operator/point.rb") %>
+              <h3>List 9.2 : point.rb（抜粋）</h3>
+              <%= _("part2_operator/point_2.rb") %>
+              <h3>List 9.3 : point.rb(抜粋)</h3>
+              <%= _("part2_operator/point_3.rb") %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="ch10">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第10章 エラー処理と例外</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <h3>List 10.1 : wc.rb</h3>
+              <%= _("part2_exception/wc.rb") %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section has-background-white-ter" id="ch11">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第11章 ブロック</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <h3>List 11.1 : hash_each.rb</h3>
+              <%= _("part2_block/hash_each.rb") %>
+              <h3>List 11.2 : hash_each2.rb</h3>
+              <%= _("part2_block/hash_each2.rb") %>
+              <h3>List 11.3 : file_each.rb</h3>
+              <%= _("part2_block/file_each.rb") %>
+              <h3>List 11.4 : file_open.rb</h3>
+              <%= _("part2_block/file_open.rb") %>
+              <h3>List 11.5 : file_open_no_block.rb</h3>
+              <%= _("part2_block/file_open_no_block.rb") %>
+              <h3>List 11.6 : sort_comp_count.rb</h3>
+              <%= _("part2_block/sort_comp_count.rb") %>
+              <h3>List 11.7 : myloop.rb</h3>
+              <%= _("part2_block/myloop.rb") %>
+              <h3>List 11.8 : total.rb</h3>
+              <%= _("part2_block/total.rb") %>
+              <h3>List 11.9 : block_args_test.rb</h3>
+              <%= _("part2_block/block_args_test.rb") %>
+              <h3>List 11.10 : param_grouping.rb</h3>
+              <%= _("part2_block/param_grouping.rb") %>
+              <h3>List 11.11 : proc1.rb</h3>
+              <%= _("part2_block/proc1.rb") %>
+              <h3>List 11.12 : total2.rb</h3>
+              <%= _("part2_block/total2.rb") %>
+              <h3>List 11.13 : call_each.rb</h3>
+              <%= _("part2_block/call_each.rb") %>
+              <h3>List 11.14 : local_and_block.rb</h3>
+              <%= _("part2_block/local_and_block.rb") %>
+              <h3>List 11.15 : local_and_block2.rb</h3>
+              <%= _("part2_block/local_and_block2.rb") %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="ch12">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第12章 数値（Numeric）クラス</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <p>ファイル名のあるソースコードはありません。</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section has-background-white-ter" id="ch13">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第13章 配列（Array）クラス</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <h3>List 13.1 : list.rb</h3>
+              <%= _("part3_array/list.rb") %>
+              <h3>List 13.2 : sum_list.rb</h3>
+              <%= _("part3_array/sum_list.rb") %>
+              <h3>List 13.3 : sum_list2.rb</h3>
+              <%= _("part3_array/sum_list2.rb") %>
+              <h3>List 13.4 : list2.rb</h3>
+              <%= _("part3_array/list2.rb") %>
+              <h3>List 13.5 : sum_with_each.rb</h3>
+              <%= _("part3_array/sum_with_each.rb") %>
+              <h3>List 13.6 : sum_with_zip.rb</h3>
+              <%= _("part3_array/sum_with_zip.rb") %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="ch14">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第14章 文字列（String）クラス</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+              <p>ファイル名のあるソースコードはありません。</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section has-background-white-ter" id="ch15">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第15章 ハッシュ（Hash）クラス</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <h3>List 15.1 : word_count.rb</h3>
+              <%= _("part3_hash/word_count.rb") %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="ch16">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第16章 正規表現（Regexp）クラス</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+
+              <h3>List 16.1 : scan1.rb</h3>
+              <%= _("part3_regexp/scan1.rb") %>
+              <h3>List 16.2 : scan2.rb</h3>
+              <%= _("part3_regexp/scan2.rb") %>
+              <h3>List 16.3 : scan3.rb</h3>
+              <%= _("part3_regexp/scan3.rb") %>
+              <h3>List 16.4 : url_match.rb</h3>
+              <%= _("part3_regexp/url_match.rb") %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section has-background-white-ter" id="ch17">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第17章 IOクラス</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+
+              <h3>List 17.1 : out.rb</h3>
+              <%= _("part3_io/out.rb") %>
+              <h3>List 17.2 : tty.rb</h3>
+              <%= _("part3_io/tty.rb") %>
+              <h3>List 17.3 : stdout_put.rb</h3>
+              <%= _("part3_io/stdout_put.rb") %>
+              <h3>List 17.4 : stdout_putc.rb</h3>
+              <%= _("part3_io/stdout_putc.rb") %>
+              <h3>List 17.5 : simple_grep_gz.rb</h3>
+              <%= _("part3_io/simple_grep_gz.rb") %>
+              <h3>List 17.6 : read_uri.rb</h3>
+              <%= _("part3_io/read_uri.rb") %>
+              <h3>List 17.7 : stringio_puts.rb</h3>
+              <%= _("part3_io/stringio_puts.rb") %>
+              <h3>List 17.8 : stringio_gets.rb</h3>
+              <%= _("part3_io/stringio_gets.rb") %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="ch18">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第18章 FileクラスとDirクラス</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <h3>List 18.1 : traverse.rb</h3>
+              <%= _("part3_file/traverse.rb") %>
+              <h3>List 18.2 : traverse_by_glob.rb</h3>
+              <%= _("part3_file/traverse_by_glob.rb") %>
+              <h3>List 18.3 : listdir.rb</h3>
+              <%= _("part3_file/listdir.rb") %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section has-background-white-ter" id="ch19">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第19章 エンコーディング（Encoding）クラス</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <h3>List 19.1 : utf8mac.rb</h3>
+              <%= _("part3_encoding/utf8mac.rb") %>
+              <h3>List 19.2 : utf8mac_fix.rb</h3>
+              <%= _("part3_encoding/utf8mac_fix.rb") %>
+              <h3>List 19.3 : utf8mac_str.rb</h3>
+              <%= _("part3_encoding/utf8mac_str.rb") %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="ch20">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第20章 TimeクラスとDateクラス</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <p>ファイル名のあるソースコードはありません。</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section has-background-white-ter" id="ch21">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第21章 Procクラス</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <h3>List 21.1 : power_of.rb</h3>
+              <%= _("part3_proc/power_of.rb") %>
+              <h3>List 21.2 : prefix.rb</h3>
+              <%= _("part3_proc/prefix.rb") %>
+              <h3>List 21.3 : total2.rb</h3>
+              <%= _("part3_proc/total2.rb") %>
+              <h3>List 21.4 : counter_proc.rb</h3>
+              <%= _("part3_proc/counter_proc.rb") %>
+              <h3>List 21.5 : proc_source_location.rb</h3>
+              <%= _("part3_proc/proc_source_location.rb") %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="ch22">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第22章 テキスト処理を行う</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+              <h3>List 22.1 : get_akage.rb</h3>
+              <%= _("part4_text/get_akage.rb") %>
+              <h3>List 22.2 : cut_akage.rb</h3>
+              <%= _("part4_text/cut_akage.rb") %>
+              <h3>List 22.3 : cut_akage2.rb</h3>
+              <%= _("part4_text/cut_akage2.rb") %>
+              <h3>List 22.4 : simple_grep.rb</h3>
+              <%= _("part4_text/simple_grep.rb") %>
+              <h3>List 22.5 : simple_scan.rb</h3>
+              <%= _("part4_text/simple_scan.rb") %>
+              <h3>List 22.6 : simple_count.rb</h3>
+              <%= _("part4_text/simple_count.rb") %>
+              <h3>List 22.7 : simple_match.rb</h3>
+              <%= _("part4_text/simple_match.rb") %>
+              <h3>List 22.8 : simple_match2.rb</h3>
+              <%= _("part4_text/simple_match2.rb") %>
+              <h3>List 22.9 : simple_match3.rb</h3>
+              <%= _("part4_text/simple_match3.rb") %>
+              <h3>List 22.10 : simple_match4.rb</h3>
+              <%= _("part4_text/simple_match4.rb") %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section has-background-white-ter" id="ch23">
+      <div class="container">
+        <div class="section-heading">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <div class="content">
+                <h2>第23章 郵便番号データを検索する</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <div class="content">
+
+<h3>List 23.1 : read_csv.rb</h3>
+<%= _("part4_postal/read_csv.rb") %>
+<h3>List 23.2 : jzipcode.rb</h3>
+<%= _("part4_postal/jzipcode_create.rb") %>
+<h3>List 23.3 : jzipcode.rb</h3>
+<%= _("part4_postal/jzipcode_find.rb") %>
+<h3>List 23.4 : postal.rb</h3>
+<%= _("part4_postal/postal.rb") %>
+<h3>List 23.5 : Gemfile(bundle initの直後)</h3>
+<%= _("part4_postal/Gemfile_1") %>
+<h3>List 23.6 : Gemfile(変更後)</h3>
+<%= _("part4_postal/Gemfile") %>
+
+<hr />
+</body>
+</html>
