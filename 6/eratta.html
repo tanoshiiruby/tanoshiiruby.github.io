@@ -57,11 +57,58 @@
         </div>
           <div class="column is-8-desktop is-offset-2-desktop">
             <div class="content">
+              <h2>第1刷分</h2>
+
+              <h3>「第8章 クラスとモジュール」の154ページ</h3>
               <p>
-                今のところ誤記・誤ったところは見つかっておりません。
+                コードとコメントに誤りがあります。
               </p>
+              <pre>
+誤 Receipt.create_store_a  #=> ストアAの新しいレシートを返す
+正 Receipt.create_store_xyz  #=> ストアXYZの新しいレシートを返す</pre>
+
+              <h3>「第8章 クラスとモジュール」の176ページの下のコード</h3>
+
+              <p>コード内のコメントに誤りがあります。</p>
+              <pre>
+誤 p C.ancestors  #=> [C, M2, M1, Object, Kernel, BasicObject]
+正 p C.ancestors  #=> [M2, M1, C, Object, Kernel, BasicObject]</pre>
+
+              <h3>「第9章 演算子」の200ページのコラム</h3>
+
+              <p>本文中のメソッド名に誤りがあります。</p>
+
+              <pre>
+誤 動作確認のためにオブジェクトを調べるための文字列を返すのが<code>inpsect</code>メソッドとなります。
+正 動作確認のためにオブジェクトを調べるための文字列を返すのが<code>inspect</code>メソッドとなります。</pre>
+
+              <h3>「第19章 IOクラスとエンコーディング」の425ページの図</h3>
+
+              <p>図の中の説明に誤りがあります。</p>
+
+              <pre>
+誤 出力先
+正 入力元</pre>
+
+              <h3>「第20章 TimeクラスとDateクラス」の429ページ</h3>
+
+              <p><code>Time.mktime</code>のコードに誤りがあります。</p>
+
+              <pre>
+誤 t = Time.mktime(2018, 11, 19, 11, 09, 40)
+正 t = Time.mktime(2018, 11, 19, 11, 9, 40)</pre>
+
+              <h3>「第20章 TimeクラスとDateクラス」の435ページの2番目のコード</h3>
+
+              <p>コード内のコメント（実行結果）に誤りがあります。</p>
+              
+              <pre>
+誤 p d.mday   # 月の何日目か（dayメソッドと同じ） => 15
+正 p d.mday   # 月の何日目か（dayメソッドと同じ） => 19
+              </pre>
+              <hr />
               <p>
-                誤りかもしれない点がありましたら、お手数ですが<a href="mailto:sbp-ruby@notwork.org">お問い合わせメールアドレス</a>よりご連絡ください。
+                その他、誤りかもしれない点がありましたら、お手数ですが<a href="mailto:sbp-ruby@notwork.org">お問い合わせメールアドレス</a>よりご連絡ください。
               </p>
             </div>
           </div>
